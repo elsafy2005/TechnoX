@@ -45,55 +45,37 @@
           <div class="service-icon">🔧</div>
           <div class="service-name">إصلاح لابتوب</div>
           <div class="service-desc">تشخيص وإصلاح جميع أعطال اللابتوب — شاشة مكسورة، بطارية، مفاتيح، مشاكل البورد والسوفتوير.</div>
-          <div class="service-meta">
-            <span class="service-price">يبدأ من 200 ج</span>
-            <span class="service-dur">24–48 ساعة</span>
-          </div>
+          <div class="service-meta"><span class="service-price">يبدأ من 200 ج</span><span class="service-dur">24–48 ساعة</span></div>
         </div>
         <div class="service-card">
           <div class="service-icon">🌬️</div>
           <div class="service-name">تنظيف الجهاز</div>
           <div class="service-desc">تنظيف عميق من الداخل وتغيير المعجون الحراري لتحسين الأداء وتخفيض درجة الحرارة بشكل ملحوظ.</div>
-          <div class="service-meta">
-            <span class="service-price">150 ج</span>
-            <span class="service-dur">نفس اليوم</span>
-          </div>
+          <div class="service-meta"><span class="service-price">150 ج</span><span class="service-dur">نفس اليوم</span></div>
         </div>
         <div class="service-card">
           <div class="service-icon">💿</div>
           <div class="service-name">تثبيت ويندوز</div>
           <div class="service-desc">تثبيت وتفعيل Windows 10 أو 11 مع جميع الدرايفرات والبرامج الأساسية — جاهز للاستخدام.</div>
-          <div class="service-meta">
-            <span class="service-price">200 ج</span>
-            <span class="service-dur">1–2 ساعة</span>
-          </div>
+          <div class="service-meta"><span class="service-price">200 ج</span><span class="service-dur">1–2 ساعة</span></div>
         </div>
         <div class="service-card">
           <div class="service-icon">⬆️</div>
           <div class="service-name">ترقية RAM وSSD</div>
           <div class="service-desc">استبدال أو إضافة رام وSSD لتسريع الجهاز بشكل كبير — الجهاز هيبقى زي الجديد.</div>
-          <div class="service-meta">
-            <span class="service-price">100 ج (التركيب)</span>
-            <span class="service-dur">30 دقيقة</span>
-          </div>
+          <div class="service-meta"><span class="service-price">100 ج (التركيب)</span><span class="service-dur">30 دقيقة</span></div>
         </div>
         <div class="service-card">
           <div class="service-icon">💾</div>
           <div class="service-name">استرجاع بيانات</div>
           <div class="service-desc">استرجاع الملفات المحذوفة من الهارد أو بعد فورمات الجهاز أو كسر الـ SSD.</div>
-          <div class="service-meta">
-            <span class="service-price">يبدأ من 300 ج</span>
-            <span class="service-dur">حسب الحالة</span>
-          </div>
+          <div class="service-meta"><span class="service-price">يبدأ من 300 ج</span><span class="service-dur">حسب الحالة</span></div>
         </div>
         <div class="service-card">
           <div class="service-icon">🛡️</div>
           <div class="service-name">إزالة فيروسات</div>
           <div class="service-desc">تنظيف الجهاز من جميع الفيروسات والبرامج الضارة وتأمينه ضد الاختراق مستقبلاً.</div>
-          <div class="service-meta">
-            <span class="service-price">250 ج</span>
-            <span class="service-dur">2–3 ساعات</span>
-          </div>
+          <div class="service-meta"><span class="service-price">250 ج</span><span class="service-dur">2–3 ساعات</span></div>
         </div>
       </div>
 
@@ -139,8 +121,11 @@
         </div>
         <div id="bookingSuccess" style="display:none;text-align:center;padding:40px 0">
           <div style="font-size:4rem;margin-bottom:16px">✅</div>
-          <h3 style="font-size:1.4rem;margin-bottom:8px">تم تسجيل طلب الحجز!</h3>
-          <p style="color:var(--gray);margin-bottom:20px">سنتواصل معك قريباً على رقم هاتفك لتأكيد الموعد</p>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">تم إرسال طلب الحجز!</h3>
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin:0 auto 20px;max-width:360px;text-align:right">
+            <p style="margin-bottom:8px">📲 <strong>واتساب:</strong> تم الإرسال تلقائياً</p>
+            <p style="color:var(--gray);font-size:.88rem;margin-bottom:0">📧 <strong style="color:var(--white)">جيميل:</strong> اضغط <strong style="color:var(--red)">Send</strong> في نافذة الإيميل</p>
+          </div>
           <button class="btn btn-ghost" onclick="resetBooking()">حجز موعد آخر</button>
         </div>
       </div>
@@ -154,34 +139,66 @@
       <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
       <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
       <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
-      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01000000000">01000000000</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
   </div>
 </footer>
+
 <script src="js/cart.js"></script>
 <script>
 function submitBooking() {
-  const name = document.getElementById('bName').value.trim();
-  const phone = document.getElementById('bPhone').value.trim();
+  const name    = document.getElementById('bName').value.trim();
+  const phone   = document.getElementById('bPhone').value.trim();
   const service = document.getElementById('bService').value;
-  const date = document.getElementById('bDate').value;
-  if (!name || !phone || !service || !date) {
-    alert('من فضلك اكمل الحقول المطلوبة (*)');
-    return;
-  }
+  const date    = document.getElementById('bDate').value;
+  const device  = document.getElementById('bDevice').value.trim();
+  const notes   = document.getElementById('bNotes').value.trim();
+  if (!name || !phone || !service || !date) { alert('من فضلك اكمل الحقول المطلوبة (*)'); return; }
+
+  const formattedDate = new Date(date).toLocaleDateString('ar-EG', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+
+  /* ══ WhatsApp ══ */
+  const waMsg =
+    `🔧 *حجز صيانة جديد — TechnoX*\n` +
+    `━━━━━━━━━━━━\n` +
+    `👤 الاسم: ${name}\n` +
+    `📞 الهاتف: ${phone}\n` +
+    `🛠️ الخدمة: ${service}\n` +
+    `📅 الموعد: ${formattedDate}\n` +
+    (device ? `💻 الجهاز: ${device}\n` : '') +
+    (notes  ? `📝 ملاحظات: ${notes}` : '');
+
+  window.open('https://wa.me/201060842931?text=' + encodeURIComponent(waMsg), '_blank');
+
+  /* ══ Gmail Compose ══ */
+  const emailSubject = `🔧 حجز صيانة جديد — ${service} — TechnoX`;
+  const emailBody =
+    `حجز صيانة جديد\n` +
+    `========================\n` +
+    `الاسم: ${name}\n` +
+    `الهاتف: ${phone}\n` +
+    `الخدمة: ${service}\n` +
+    `الموعد: ${formattedDate}\n` +
+    (device ? `الجهاز: ${device}\n` : '') +
+    (notes  ? `ملاحظات: ${notes}` : '');
+
+  const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
+    '&to=technox7778@gmail.com' +
+    '&su=' + encodeURIComponent(emailSubject) +
+    '&body=' + encodeURIComponent(emailBody);
+  window.open(gmailUrl, '_blank');
+
   document.getElementById('bookingForm').style.display = 'none';
   document.getElementById('bookingSuccess').style.display = 'block';
 }
+
 function resetBooking() {
   document.getElementById('bookingForm').style.display = 'block';
   document.getElementById('bookingSuccess').style.display = 'none';
-  document.getElementById('bName').value = '';
-  document.getElementById('bPhone').value = '';
+  ['bName','bPhone','bDevice','bNotes'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('bService').value = '';
   document.getElementById('bDate').value = '';
-  document.getElementById('bDevice').value = '';
-  document.getElementById('bNotes').value = '';
 }
 </script>
 </body>
