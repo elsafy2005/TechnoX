@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoX | كمبيوتر مكتبي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html" class="active">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html">إكسسوارات</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>كمبيوتر مكتبي</span></div>
+      <h1 class="page-title">🖥️ كمبيوتر مكتبي</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-thumb">🖥️</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — جيمينج</div>
+            <div class="product-name">كمبيوتر جيمينج — Ryzen 7 7700X</div>
+            <div class="product-specs">32GB DDR5 | 1TB NVMe SSD | RTX 4070 | كيس ATX فل RGB</div>
+            <div class="product-footer">
+              <div><div class="product-price">52,000 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('pc-r7-4070','PC Ryzen 7 + RTX 4070',52000,'🖥️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-thumb">⚡</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — جيمينج</div>
+            <div class="product-name">كمبيوتر جيمينج — Ryzen 5 7600X</div>
+            <div class="product-specs">16GB DDR5 | 1TB SSD | RTX 4060 Ti | ميد رينج</div>
+            <div class="product-footer">
+              <div><div class="product-price">38,000 ج</div><div class="product-old">42,000 ج</div></div>
+              <button class="btn-add" onclick="addToCart('pc-r5-4060ti','PC Ryzen 5 + RTX 4060 Ti',38000,'⚡')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-thumb">🔵</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — جيمينج</div>
+            <div class="product-name">كمبيوتر جيمينج — Core i5 13600K</div>
+            <div class="product-specs">16GB DDR4 | 512GB SSD | RTX 3060 | بادجت</div>
+            <div class="product-footer">
+              <div><div class="product-price">28,000 ج</div></div>
+              <button class="btn-add" onclick="addToCart('pc-i5-3060','PC i5 + RTX 3060',28000,'🔵')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-thumb">💼</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — أوفيس</div>
+            <div class="product-name">كمبيوتر أوفيس — Core i5 12th</div>
+            <div class="product-specs">8GB RAM | 256GB SSD | كارت شاشة مدمج | مناسب للشغل</div>
+            <div class="product-footer">
+              <div><div class="product-price">9,500 ج</div></div>
+              <button class="btn-add" onclick="addToCart('pc-office-i5','Office PC i5',9500,'💼')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-thumb">🟩</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — أوفيس</div>
+            <div class="product-name">كمبيوتر أوفيس — Core i3 12th</div>
+            <div class="product-specs">8GB RAM | 256GB SSD | أوفيس وإنترنت | الأرخص</div>
+            <div class="product-footer">
+              <div><div class="product-price">7,000 ج</div></div>
+              <button class="btn-add" onclick="addToCart('pc-office-i3','Office PC i3',7000,'🟩')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-thumb">🖥️</div>
+          <div class="product-body">
+            <div class="product-brand">Custom Build — ورك ستيشن</div>
+            <div class="product-name">ورك ستيشن — Ryzen 9 7900X</div>
+            <div class="product-specs">64GB DDR5 | 2TB NVMe | RTX 4080 | مونتاج و3D</div>
+            <div class="product-footer">
+              <div><div class="product-price">85,000 ج</div></div>
+              <button class="btn-add" onclick="addToCart('ws-r9-4080','Workstation Ryzen 9',85000,'🖥️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Note -->
+      <div style="margin-top:40px;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center">
+        <p style="font-size:.95rem;color:var(--gray)">
+          🔧 <strong style="color:var(--white)">بناء مخصص:</strong> عايز مواصفات مختلفة؟ تواصل معنا وهنبني ليك الجهاز المناسب بأحسن سعر.
+        </p>
+        <a href="contact.html" class="btn btn-ghost btn-sm" style="margin-top:12px;display:inline-flex">تواصل معنا</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01000000000">01000000000</a></li><li><a href="https://wa.me/201000000000">واتساب</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+  </div>
+</footer>
+<script src="js/cart.js"></script>
+</body>
+</html>

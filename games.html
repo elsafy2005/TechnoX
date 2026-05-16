@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoX | الألعاب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html" class="active">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html">إكسسوارات</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>الألعاب</span></div>
+      <div class="page-header-row">
+        <h1 class="page-title">🎮 الألعاب</h1>
+        <a href="game-topup.html" class="btn btn-red btn-sm">شحن الألعاب ←</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div style="background:var(--dark);border-bottom:1px solid var(--border);padding:16px 0">
+    <div class="container" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-sm filter-btn" data-filter="all" onclick="filterGames('all',this)">الكل</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="ps5" onclick="filterGames('ps5',this)">PlayStation 5</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="xbox" onclick="filterGames('xbox',this)">Xbox</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="pc" onclick="filterGames('pc',this)">PC</button>
+      <button class="btn btn-outline btn-sm filter-btn" data-filter="ps4" onclick="filterGames('ps4',this)">PlayStation 4</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid" id="gamesGrid">
+
+        <!-- PS5 -->
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">🎮</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">GTA VI — Grand Theft Auto 6</div>
+            <div class="product-specs">أكشن مغامرة | العالم المفتوح | 2025</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('gta6','GTA VI',1200,'🎮')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">⚔️</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">Black Myth: Wukong</div>
+            <div class="product-specs">أكشن RPG | خرافي | 2024</div>
+            <div class="product-footer">
+              <div><div class="product-price">950 ج</div><div class="product-old">1,100 ج</div></div>
+              <button class="btn-add" onclick="addToCart('wukong','Black Myth: Wukong',950,'⚔️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">🕷️</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">Marvel's Spider-Man 2</div>
+            <div class="product-specs">أكشن مغامرة | مانهاتن | 2023</div>
+            <div class="product-footer">
+              <div><div class="product-price">900 ج</div><div class="product-old">1,050 ج</div></div>
+              <button class="btn-add" onclick="addToCart('spiderman2','Spider-Man 2',900,'🕷️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">🐉</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">Elden Ring — Shadow of the Erdtree</div>
+            <div class="product-specs">RPG | مصارعة | DLC كامل</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,050 ج</div></div>
+              <button class="btn-add" onclick="addToCart('eldenring','Elden Ring',1050,'🐉')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">⚽</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">EA FC 25</div>
+            <div class="product-specs">كرة قدم | Ultimate Team | 2024</div>
+            <div class="product-footer">
+              <div><div class="product-price">700 ج</div><div class="product-old">850 ج</div></div>
+              <button class="btn-add" onclick="addToCart('fc25','EA FC 25',700,'⚽')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps5">
+          <div class="product-thumb">🌊</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 5</div>
+            <div class="product-name">God of War Ragnarök</div>
+            <div class="product-specs">أكشن مغامرة | أساطير نوردية</div>
+            <div class="product-footer">
+              <div><div class="product-price">850 ج</div></div>
+              <button class="btn-add" onclick="addToCart('gow','God of War Ragnarök',850,'🌊')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Xbox -->
+        <div class="product-card" data-cat="xbox">
+          <div class="product-thumb">🏎️</div>
+          <div class="product-body">
+            <div class="product-brand">Xbox Series X</div>
+            <div class="product-name">Forza Horizon 5</div>
+            <div class="product-specs">سباقات | المكسيك | أونلاين</div>
+            <div class="product-footer">
+              <div><div class="product-price">750 ج</div></div>
+              <button class="btn-add" onclick="addToCart('forza5','Forza Horizon 5',750,'🏎️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="xbox">
+          <div class="product-thumb">🔫</div>
+          <div class="product-body">
+            <div class="product-brand">Xbox Series X</div>
+            <div class="product-name">Halo Infinite</div>
+            <div class="product-specs">شوتر | مالتيبلاير | مجاني أونلاين</div>
+            <div class="product-footer">
+              <div><div class="product-price">500 ج</div></div>
+              <button class="btn-add" onclick="addToCart('halo','Halo Infinite',500,'🔫')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PC -->
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">💻</div>
+          <div class="product-body">
+            <div class="product-brand">PC — Steam Key</div>
+            <div class="product-name">Cyberpunk 2077 + Phantom Liberty</div>
+            <div class="product-specs">RPG | مستقبلي | كامل + DLC</div>
+            <div class="product-footer">
+              <div><div class="product-price">650 ج</div><div class="product-old">900 ج</div></div>
+              <button class="btn-add" onclick="addToCart('cp2077','Cyberpunk 2077',650,'💻')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="pc">
+          <div class="product-thumb">🌌</div>
+          <div class="product-body">
+            <div class="product-brand">PC — Steam Key</div>
+            <div class="product-name">Baldur's Gate 3</div>
+            <div class="product-specs">RPG | خيال | تعاون حتى 4 لاعبين</div>
+            <div class="product-footer">
+              <div><div class="product-price">800 ج</div></div>
+              <button class="btn-add" onclick="addToCart('bg3','Baldur\'s Gate 3',800,'🌌')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PS4 -->
+        <div class="product-card" data-cat="ps4">
+          <div class="product-thumb">🦁</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 4</div>
+            <div class="product-name">The Last of Us Part II</div>
+            <div class="product-specs">أكشن مغامرة | قصة | 2020</div>
+            <div class="product-footer">
+              <div><div class="product-price">450 ج</div><div class="product-old">600 ج</div></div>
+              <button class="btn-add" onclick="addToCart('tlou2','The Last of Us 2',450,'🦁')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="ps4">
+          <div class="product-thumb">🏔️</div>
+          <div class="product-body">
+            <div class="product-brand">PlayStation 4</div>
+            <div class="product-name">Uncharted 4: A Thief's End</div>
+            <div class="product-specs">أكشن مغامرة | قصة عالمية</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div></div>
+              <button class="btn-add" onclick="addToCart('uc4','Uncharted 4',350,'🏔️')">+ أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">TECHNO<span class="x">X</span></div>
+        <p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p>
+      </div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01000000000">01000000000</a></li><li><a href="https://wa.me/201000000000">واتساب</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span>
+      <span>متجر الكمبيوتر والألعاب</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+function filterGames(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('btn-red'); b.classList.add('btn-outline');
+  });
+  btn.classList.remove('btn-outline'); btn.classList.add('btn-red');
+  document.querySelectorAll('#gamesGrid .product-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

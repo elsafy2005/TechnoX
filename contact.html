@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoX | تواصل معنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html">إكسسوارات</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="contact.html" class="active">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>تواصل معنا</span></div>
+      <h1 class="page-title">📞 تواصل معنا</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">نحن هنا لمساعدتك</h2>
+      <p class="section-sub">تواصل معنا بأي طريقة تناسبك — هنرد عليك في أسرع وقت</p>
+
+      <div class="contact-grid">
+        <!-- غير رقم الهاتف هنا -->
+        <a href="tel:01000000000" class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">هاتف</div>
+            <div class="contact-value" dir="ltr">01000000000</div>
+          </div>
+        </a>
+
+        <!-- غير رقم الواتساب هنا -->
+        <a href="https://wa.me/201000000000" target="_blank" class="contact-card">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label">واتساب</div>
+            <div class="contact-value" dir="ltr">01000000000</div>
+          </div>
+        </a>
+
+        <!-- غير الإيميل هنا -->
+        <a href="mailto:info@technox.com" class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">البريد الإلكتروني</div>
+            <div class="contact-value">info@technox.com</div>
+          </div>
+        </a>
+
+        <!-- غير العنوان هنا -->
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">العنوان</div>
+            <div class="contact-value">شارع التحرير، وسط البلد، القاهرة</div>
+          </div>
+        </div>
+
+        <!-- غير مواعيد العمل هنا -->
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">مواعيد العمل</div>
+            <div class="contact-value">السبت – الخميس</div>
+            <div style="color:var(--gray);font-size:.85rem;margin-top:4px">10 صباحاً – 10 مساءً</div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">⚡</div>
+          <div>
+            <div class="contact-label">وقت الرد</div>
+            <div class="contact-value">خلال ساعة</div>
+            <div style="color:var(--gray);font-size:.85rem;margin-top:4px">في أوقات العمل</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div style="margin-top:40px">
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:16px">تابعنا على السوشيال ميديا</h3>
+        <div class="social-row">
+          <!-- غير روابط السوشيال هنا -->
+          <a href="https://facebook.com" target="_blank" class="social-btn">📘 فيسبوك</a>
+          <a href="https://instagram.com" target="_blank" class="social-btn">📸 إنستجرام</a>
+          <a href="https://tiktok.com" target="_blank" class="social-btn">🎵 تيك توك</a>
+          <a href="https://youtube.com" target="_blank" class="social-btn">▶️ يوتيوب</a>
+        </div>
+      </div>
+
+      <!-- Message Form -->
+      <div class="form-box" style="margin-top:60px">
+        <h3>✉️ ابعتلنا رسالة</h3>
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>الاسم *</label>
+              <input type="text" id="cName" placeholder="اسمك" />
+            </div>
+            <div class="form-group">
+              <label>الهاتف *</label>
+              <input type="tel" id="cPhone" placeholder="01000000000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>الموضوع</label>
+            <input type="text" id="cSubject" placeholder="استفسار، شكوى، طلب..." />
+          </div>
+          <div class="form-group">
+            <label>الرسالة *</label>
+            <textarea id="cMessage" placeholder="اكتب رسالتك هنا..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitContact()">إرسال الرسالة</button>
+        </div>
+        <div id="contactSuccess" style="display:none;text-align:center;padding:40px 0">
+          <div style="font-size:4rem;margin-bottom:16px">✅</div>
+          <h3 style="font-size:1.4rem;margin-bottom:8px">تم إرسال رسالتك!</h3>
+          <p style="color:var(--gray);margin-bottom:20px">سنرد عليك في أقرب وقت ممكن</p>
+          <button class="btn btn-ghost" onclick="resetContact()">إرسال رسالة أخرى</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01000000000">01000000000</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+  </div>
+</footer>
+<script src="js/cart.js"></script>
+<script>
+function submitContact() {
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  const msg = document.getElementById('cMessage').value.trim();
+  if (!name || !phone || !msg) { alert('من فضلك اكمل الحقول المطلوبة (*)'); return; }
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('contactSuccess').style.display = 'block';
+}
+function resetContact() {
+  document.getElementById('contactForm').style.display = 'block';
+  document.getElementById('contactSuccess').style.display = 'none';
+  ['cName','cPhone','cSubject','cMessage'].forEach(id => document.getElementById(id).value = '');
+}
+</script>
+</body>
+</html>

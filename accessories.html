@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoX | إكسسوارات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html" class="active">إكسسوارات</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>إكسسوارات</span></div>
+      <h1 class="page-title">🎧 إكسسوارات</h1>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div style="background:var(--dark);border-bottom:1px solid var(--border);padding:16px 0">
+    <div class="container" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-sm filter-btn" onclick="filterAcc('all',this)">الكل</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('headset',this)">هيدفون</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('mouse',this)">ماوس</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('keyboard',this)">كيبورد</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('monitor',this)">شاشة</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('controller',this)">كنترولر</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid" id="accGrid">
+
+        <!-- هيدفون -->
+        <div class="product-card" data-cat="headset">
+          <div class="product-thumb">🎧</div>
+          <div class="product-body">
+            <div class="product-brand">HyperX</div>
+            <div class="product-name">HyperX Cloud II</div>
+            <div class="product-specs">صوت 7.1 محيطي | ميكروفون قابل للإزالة | USB + 3.5mm</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,800 ج</div></div>
+              <button class="btn-add" onclick="addToCart('hx-cloud2','HyperX Cloud II',1800,'🎧')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="headset">
+          <div class="product-thumb">🎧</div>
+          <div class="product-body">
+            <div class="product-brand">SteelSeries</div>
+            <div class="product-name">SteelSeries Arctis 7+</div>
+            <div class="product-specs">لاسلكي 2.4GHz | بطارية 30 ساعة | لو لاتنسي</div>
+            <div class="product-footer">
+              <div><div class="product-price">2,600 ج</div></div>
+              <button class="btn-add" onclick="addToCart('arctis7','Arctis 7+',2600,'🎧')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="headset">
+          <div class="product-thumb">🎧</div>
+          <div class="product-body">
+            <div class="product-brand">Razer</div>
+            <div class="product-name">Razer BlackShark V2 X</div>
+            <div class="product-specs">صوت 7.1 | خفيف | مريح لجلسات طويلة</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,200 ج</div><div class="product-old">1,450 ج</div></div>
+              <button class="btn-add" onclick="addToCart('blackshark','BlackShark V2 X',1200,'🎧')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ماوس -->
+        <div class="product-card" data-cat="mouse">
+          <div class="product-thumb">🖱️</div>
+          <div class="product-body">
+            <div class="product-brand">Logitech</div>
+            <div class="product-name">Logitech G502 HERO</div>
+            <div class="product-specs">25,600 DPI | 11 زر | RGB | وزن قابل للتعديل</div>
+            <div class="product-footer">
+              <div><div class="product-price">950 ج</div><div class="product-old">1,100 ج</div></div>
+              <button class="btn-add" onclick="addToCart('g502','Logitech G502 HERO',950,'🖱️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="mouse">
+          <div class="product-thumb">🖱️</div>
+          <div class="product-body">
+            <div class="product-brand">Razer</div>
+            <div class="product-name">Razer DeathAdder V3</div>
+            <div class="product-specs">30,000 DPI | تصميم إرغونومي | خفيف 59g</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,500 ج</div></div>
+              <button class="btn-add" onclick="addToCart('deathadder','DeathAdder V3',1500,'🖱️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="mouse">
+          <div class="product-thumb">🖱️</div>
+          <div class="product-body">
+            <div class="product-brand">SteelSeries</div>
+            <div class="product-name">SteelSeries Rival 3</div>
+            <div class="product-specs">8,500 DPI | 3 زون RGB | مناسب للبادجت</div>
+            <div class="product-footer">
+              <div><div class="product-price">450 ج</div></div>
+              <button class="btn-add" onclick="addToCart('rival3','Rival 3',450,'🖱️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- كيبورد -->
+        <div class="product-card" data-cat="keyboard">
+          <div class="product-thumb">⌨️</div>
+          <div class="product-body">
+            <div class="product-brand">Redragon</div>
+            <div class="product-name">Redragon K552 — ميكانيكي</div>
+            <div class="product-specs">Blue Switch | فل RGB | TKL كومباكت</div>
+            <div class="product-footer">
+              <div><div class="product-price">650 ج</div></div>
+              <button class="btn-add" onclick="addToCart('k552','Redragon K552',650,'⌨️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="keyboard">
+          <div class="product-thumb">⌨️</div>
+          <div class="product-body">
+            <div class="product-brand">Corsair</div>
+            <div class="product-name">Corsair K70 RGB MK.2</div>
+            <div class="product-specs">Cherry MX Red | Full Size | Dedicated Media Keys</div>
+            <div class="product-footer">
+              <div><div class="product-price">2,800 ج</div></div>
+              <button class="btn-add" onclick="addToCart('k70','Corsair K70 RGB',2800,'⌨️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- شاشة -->
+        <div class="product-card" data-cat="monitor">
+          <div class="product-thumb">🖥️</div>
+          <div class="product-body">
+            <div class="product-brand">MSI</div>
+            <div class="product-name">MSI G274QPF — شاشة جيمينج 27"</div>
+            <div class="product-specs">QHD 2560×1440 | 165Hz | IPS | 1ms</div>
+            <div class="product-footer">
+              <div><div class="product-price">8,500 ج</div></div>
+              <button class="btn-add" onclick="addToCart('msi-g274','MSI G274QPF',8500,'🖥️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="monitor">
+          <div class="product-thumb">🖥️</div>
+          <div class="product-body">
+            <div class="product-brand">ASUS</div>
+            <div class="product-name">ASUS TUF Gaming VG24VQE — 24"</div>
+            <div class="product-specs">FHD 1080p | 165Hz | Curved VA | 1ms</div>
+            <div class="product-footer">
+              <div><div class="product-price">5,200 ج</div><div class="product-old">6,000 ج</div></div>
+              <button class="btn-add" onclick="addToCart('asus-vg24','ASUS TUF VG24VQE',5200,'🖥️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- كنترولر -->
+        <div class="product-card" data-cat="controller">
+          <div class="product-thumb">🎮</div>
+          <div class="product-body">
+            <div class="product-brand">Sony</div>
+            <div class="product-name">DualSense — كنترولر PS5</div>
+            <div class="product-specs">Haptic Feedback | Adaptive Triggers | USB-C</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,900 ج</div></div>
+              <button class="btn-add" onclick="addToCart('dualsense','DualSense PS5',1900,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="controller">
+          <div class="product-thumb">🕹️</div>
+          <div class="product-body">
+            <div class="product-brand">Microsoft</div>
+            <div class="product-name">Xbox Wireless Controller</div>
+            <div class="product-specs">Bluetooth | USB-C | PC + Xbox | Carbon Black</div>
+            <div class="product-footer">
+              <div><div class="product-price">1,600 ج</div></div>
+              <button class="btn-add" onclick="addToCart('xbox-ctrl','Xbox Wireless Controller',1600,'🕹️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01000000000">01000000000</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+  </div>
+</footer>
+<script src="js/cart.js"></script>
+<script>
+function filterAcc(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('btn-red'); b.classList.add('btn-outline'); });
+  btn.classList.remove('btn-outline'); btn.classList.add('btn-red');
+  document.querySelectorAll('#accGrid .product-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
