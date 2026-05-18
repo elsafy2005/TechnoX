@@ -43,31 +43,19 @@
       <div class="contact-grid">
         <a href="tel:01060842931" class="contact-card">
           <div class="contact-icon">📞</div>
-          <div>
-            <div class="contact-label">هاتف</div>
-            <div class="contact-value" dir="ltr">01060842931</div>
-          </div>
+          <div><div class="contact-label">هاتف</div><div class="contact-value" dir="ltr">01060842931</div></div>
         </a>
         <a href="https://wa.me/201060842931" target="_blank" class="contact-card">
           <div class="contact-icon">💬</div>
-          <div>
-            <div class="contact-label">واتساب</div>
-            <div class="contact-value" dir="ltr">01060842931</div>
-          </div>
+          <div><div class="contact-label">واتساب</div><div class="contact-value" dir="ltr">01060842931</div></div>
         </a>
         <a href="mailto:technox7778@gmail.com" class="contact-card">
           <div class="contact-icon">📧</div>
-          <div>
-            <div class="contact-label">البريد الإلكتروني</div>
-            <div class="contact-value">technox7778@gmail.com</div>
-          </div>
+          <div><div class="contact-label">البريد الإلكتروني</div><div class="contact-value">technox7778@gmail.com</div></div>
         </a>
         <div class="contact-card">
           <div class="contact-icon">📍</div>
-          <div>
-            <div class="contact-label">العنوان</div>
-            <div class="contact-value">اكتب عنوانك هنا</div>
-          </div>
+          <div><div class="contact-label">العنوان</div><div class="contact-value">اكتب عنوانك هنا</div></div>
         </div>
         <div class="contact-card">
           <div class="contact-icon">🕐</div>
@@ -98,18 +86,18 @@
         </div>
       </div>
 
-      <!-- Message Form -->
+      <!-- Contact Form -->
       <div class="form-box" style="margin-top:60px">
         <h3>✉️ ابعتلنا رسالة</h3>
-        <div id="contactForm">
+        <form id="orderForm" onsubmit="submitContact(event)">
           <div class="form-row">
             <div class="form-group">
               <label>الاسم *</label>
-              <input type="text" id="cName" placeholder="اسمك" />
+              <input type="text" id="cName" placeholder="اسمك" required />
             </div>
             <div class="form-group">
               <label>الهاتف *</label>
-              <input type="tel" id="cPhone" placeholder="01000000000" />
+              <input type="tel" id="cPhone" placeholder="01000000000" required />
             </div>
           </div>
           <div class="form-group">
@@ -118,19 +106,10 @@
           </div>
           <div class="form-group">
             <label>الرسالة *</label>
-            <textarea id="cMessage" placeholder="اكتب رسالتك هنا..."></textarea>
+            <textarea id="cMessage" placeholder="اكتب رسالتك هنا..." required></textarea>
           </div>
-          <button class="form-submit" onclick="submitContact()">إرسال الرسالة</button>
-        </div>
-        <div id="contactSuccess" style="display:none;text-align:center;padding:40px 0">
-          <div style="font-size:4rem;margin-bottom:16px">✅</div>
-          <h3 style="font-size:1.4rem;margin-bottom:12px">تم إرسال رسالتك!</h3>
-          <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin:0 auto 20px;max-width:360px;text-align:right">
-            <p style="margin-bottom:8px">📲 <strong>واتساب:</strong> تم الإرسال تلقائياً</p>
-            <p style="color:var(--gray);font-size:.88rem;margin-bottom:0">📧 <strong style="color:var(--white)">جيميل:</strong> اضغط <strong style="color:var(--red)">Send</strong> في نافذة الإيميل</p>
-          </div>
-          <button class="btn btn-ghost" onclick="resetContact()">إرسال رسالة أخرى</button>
-        </div>
+          <button type="submit" class="form-submit" id="contactBtn">إرسال الرسالة</button>
+        </form>
       </div>
     </div>
   </section>
@@ -144,54 +123,46 @@
       <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
       <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span></div>
   </div>
 </footer>
 
 <script src="js/cart.js"></script>
 <script>
-function submitContact() {
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeeESKlVuuomxGDHztdCI6cUFUv59xWtwzpmPsb0V9irrEWEUABCHQ8W2Rr_XTKRgFog/exec";
+
+function submitContact(e) {
+  e.preventDefault();
+
   const name    = document.getElementById('cName').value.trim();
   const phone   = document.getElementById('cPhone').value.trim();
   const subject = document.getElementById('cSubject').value.trim();
   const message = document.getElementById('cMessage').value.trim();
-  if (!name || !phone || !message) { alert('من فضلك اكمل الحقول المطلوبة (*)'); return; }
 
-  /* ══ WhatsApp ══ */
+  const btn = document.getElementById('contactBtn');
+  btn.disabled = true;
+  btn.innerText = 'جاري الإرسال...';
+
+  /* ── WhatsApp ── */
   const waMsg =
-    `💬 *رسالة جديدة — TechnoX*\n` +
-    `━━━━━━━━━━━━\n` +
-    `👤 الاسم: ${name}\n` +
-    `📞 الهاتف: ${phone}\n` +
-    (subject ? `📌 الموضوع: ${subject}\n` : '') +
-    `\n💬 الرسالة:\n${message}`;
-
+    `💬 *رسالة جديدة — TechnoX*\n━━━━━━━━━━━━\n` +
+    `👤 ${name}\n📞 ${phone}\n` +
+    `${subject ? '📌 ' + subject + '\n' : ''}\n💬 ${message}`;
   window.open('https://wa.me/201060842931?text=' + encodeURIComponent(waMsg), '_blank');
 
-  /* ══ Gmail Compose ══ */
-  const emailSubject = `💬 رسالة جديدة${subject ? ' — ' + subject : ''} — TechnoX`;
-  const emailBody =
-    `رسالة جديدة من موقع TechnoX\n` +
-    `========================\n` +
-    `الاسم: ${name}\n` +
-    `الهاتف: ${phone}\n` +
-    (subject ? `الموضوع: ${subject}\n` : '') +
-    `\nالرسالة:\n${message}`;
+  /* ── Google Sheet (FormData) ── */
+  const formData = new FormData();
+  formData.append("phone",   phone);
+  formData.append("pubg_id", name);
+  formData.append("package", (subject ? subject + ' | ' : '') + message);
+  formData.append("game",    "رسالة / شكوى — TechnoX");
 
-  const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
-    '&to=technox7778@gmail.com' +
-    '&su=' + encodeURIComponent(emailSubject) +
-    '&body=' + encodeURIComponent(emailBody);
-  window.open(gmailUrl, '_blank');
-
-  document.getElementById('contactForm').style.display = 'none';
-  document.getElementById('contactSuccess').style.display = 'block';
-}
-
-function resetContact() {
-  document.getElementById('contactForm').style.display = 'block';
-  document.getElementById('contactSuccess').style.display = 'none';
-  ['cName','cPhone','cSubject','cMessage'].forEach(id => document.getElementById(id).value = '');
+  fetch(SCRIPT_URL, { method: "POST", body: formData })
+    .then(() => { window.location.href = "thanks.html"; })
+    .catch(err => {
+      console.error(err);
+      window.location.href = "thanks.html";
+    });
 }
 </script>
 </body>
