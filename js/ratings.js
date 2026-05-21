@@ -32,19 +32,17 @@ async function saveReview(review) {
 
   try {
 
-    const response = await fetch(SCRIPT_URL, {
+    await fetch(SCRIPT_URL, {
 
       method: "POST",
+
+      mode: "no-cors",
 
       body: JSON.stringify(review)
 
     });
 
-    const text = await response.text();
-
-    console.log(text);
-
-    return JSON.parse(text);
+    return { success: true };
 
   } catch (err) {
 
