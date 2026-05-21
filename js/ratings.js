@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjniElIsG_FlG1lj1wfPOlEGzOD4q_gJcKbJqtBAGpe1v9F7I7PropnpsvIENftCTILA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwqCR9hDBrJ_5JYeTaGuxLry_QLTTHIOVfC0USEbnovHt1KXF7h4BB1mUdHXFS0AkqfqQ/exec";
 
 /* =========================
    تحميل التقييمات
@@ -32,23 +32,23 @@ async function saveReview(review) {
 
   try {
 
-    const res = await fetch(SCRIPT_URL, {
+    const response = await fetch(SCRIPT_URL, {
 
       method: "POST",
-
-      headers: {
-        "Content-Type": "application/json"
-      },
 
       body: JSON.stringify(review)
 
     });
 
-    return await res.json();
+    const text = await response.text();
+
+    console.log(text);
+
+    return JSON.parse(text);
 
   } catch (err) {
 
-    console.error("POST ERROR:", err);
+    console.error(err);
 
     return { success: false };
 
