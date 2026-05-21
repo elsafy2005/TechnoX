@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwqCR9hDBrJ_5JYeTaGuxLry_QLTTHIOVfC0USEbnovHt1KXF7h4BB1mUdHXFS0AkqfqQ/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz8NtUsAB27Xrb-p5phiIN_r43nPueRWmgr07WdK4IhnPWoXvkcA-Y_SqcaYI4I8HMJqA/exec";
 
 /* =========================
    تحميل التقييمات
