@@ -1,7 +1,7 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyO307odi5jMtJtnJtG8qJd6QiOa1dXTnd79Q56XVT8pGOXexyCGCXksJqpxmZgIW4dA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjniElIsG_FlG1lj1wfPOlEGzOD4q_gJcKbJqtBAGpe1v9F7I7PropnpsvIENftCTILA/exec";
 
 /* =========================
-   تحميل التقييمات من السيرفر
+   تحميل التقييمات
 ========================= */
 
 async function getAllReviews() {
@@ -10,11 +10,13 @@ async function getAllReviews() {
 
     const res = await fetch(SCRIPT_URL);
 
-    return await res.json();
+    const data = await res.json();
 
-  } catch (e) {
+    return Array.isArray(data) ? data : [];
 
-    console.error(e);
+  } catch (err) {
+
+    console.error("GET ERROR:", err);
 
     return [];
 
@@ -23,7 +25,7 @@ async function getAllReviews() {
 }
 
 /* =========================
-   إرسال تقييم للسيرفر
+   إرسال تقييم
 ========================= */
 
 async function saveReview(review) {
@@ -34,15 +36,19 @@ async function saveReview(review) {
 
       method: "POST",
 
+      headers: {
+        "Content-Type": "application/json"
+      },
+
       body: JSON.stringify(review)
 
     });
 
     return await res.json();
 
-  } catch (e) {
+  } catch (err) {
 
-    console.error(e);
+    console.error("POST ERROR:", err);
 
     return { success: false };
 
@@ -54,9 +60,7 @@ async function saveReview(review) {
    رسم النجوم
 ========================= */
 
-function renderStars(val, size) {
-
-  size = size || 14;
+function renderStars(val, size = 14) {
 
   let html = '';
 
@@ -67,7 +71,9 @@ function renderStars(val, size) {
         color:${i <= val ? '#f5a623' : '#444'};
         font-size:${size}px;
         line-height:1;
-      ">★</span>
+      ">
+        ★
+      </span>
     `;
 
   }
@@ -77,22 +83,61 @@ function renderStars(val, size) {
 }
 
 /* =========================
-   متوسط تقييم منتج
+   إشعار بسيط
 ========================= */
 
-async function getRating(pid) {
+function showToast(msg) {
 
-  const reviews = await getAllReviews();
+  let toast = document.createElement("div");
+
+  toast.innerText = msg;
+
+  toast.style.cssText = `
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#111;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:8px;
+    z-index:999999;
+    font-family:Cairo,sans-serif;
+    border:1px solid #333;
+  `;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+
+    toast.remove();
+
+  }, 2500);
+
+}
+
+/* =========================
+   حساب متوسط منتج
+========================= */
+
+function calculateRating(reviews, pid) {
 
   const productReviews = reviews.filter(r => r.productId === pid);
 
   if (!productReviews.length) {
 
-    return { avg: 0, count: 0 };
+    return {
+      avg: 0,
+      count: 0
+    };
 
   }
 
-  const total = productReviews.reduce((s, r) => s + Number(r.rating), 0);
+  const total = productReviews.reduce((s, r) => {
+
+    return s + Number(r.rating);
+
+  }, 0);
 
   return {
 
@@ -110,113 +155,108 @@ async function getRating(pid) {
 
 async function initProductRatings() {
 
-  const allReviews = await getAllReviews();
+  const reviews = await getAllReviews();
 
-  document.querySelectorAll('.product-card').forEach(async function(card){
+  document.querySelectorAll('.product-card').forEach(function(card){
 
-    var btn = card.querySelector('.btn-add');
+    const btn = card.querySelector('.btn-add');
 
-    if(!btn) return;
+    if (!btn) return;
 
-    var match = (btn.getAttribute('onclick') || '').match(/addToCart\('([^']+)'/);
+    const match = (btn.getAttribute('onclick') || '')
+      .match(/addToCart\('([^']+)'/);
 
-    if(!match) return;
+    if (!match) return;
 
-    var pid = match[1];
+    const pid = match[1];
 
-    var body = card.querySelector('.product-body');
+    const body = card.querySelector('.product-body');
 
-    var footer = card.querySelector('.product-footer');
+    const footer = card.querySelector('.product-footer');
 
-    if(!body || !footer) return;
+    if (!body || !footer) return;
 
-    const productReviews = allReviews.filter(r => r.productId === pid);
+    const productName = (
+      (card.querySelector('.product-name') || {}).textContent || pid
+    ).trim();
 
-    const total = productReviews.reduce((s,r)=>s+Number(r.rating),0);
+    const ratingData = calculateRating(reviews, pid);
 
-    const avg = productReviews.length ? total / productReviews.length : 0;
+    const ratingBox = document.createElement('div');
 
-    var productName = ((card.querySelector('.product-name') || {}).textContent || pid)
-      .trim()
-      .replace(/'/g,"\\'");
-
-    var starRow = document.createElement('div');
-
-    starRow.style.cssText = `
+    ratingBox.style.cssText = `
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      margin:6px 0 4px;
+      align-items:center;
+      margin:8px 0;
+      gap:10px;
     `;
 
-    starRow.innerHTML = `
+    ratingBox.innerHTML = `
+
       <div id="star-display-${pid}"
-        style="display:flex;align-items:center;gap:4px;direction:ltr;">
-        ${renderStars(Math.round(avg),14)}
-        <span style="font-size:11px;color:#999;margin-right:2px;">
-          (${productReviews.length})
+        style="
+          display:flex;
+          align-items:center;
+          gap:5px;
+          direction:ltr;
+        ">
+
+        ${renderStars(Math.round(ratingData.avg), 15)}
+
+        <span style="
+          color:#999;
+          font-size:12px;
+        ">
+          (${ratingData.count})
         </span>
+
       </div>
 
       <button
+        id="rate-toggle-${pid}"
         onclick="toggleRateForm('${pid}')"
         style="
           background:none;
           border:none;
-          color:#999;
-          font-size:.73rem;
+          color:#aaa;
           cursor:pointer;
-          font-family:Cairo,sans-serif;
+          font-size:.8rem;
           text-decoration:underline;
-          padding:0;
-        "
-        id="rate-toggle-${pid}">
+          font-family:Cairo,sans-serif;
+        ">
         + قيّم
       </button>
+
     `;
 
-    body.insertBefore(starRow, footer);
+    body.insertBefore(ratingBox, footer);
 
-    var form = document.createElement('div');
+    const form = document.createElement('div');
 
-    form.id = 'rate-form-' + pid;
+    form.id = `rate-form-${pid}`;
 
     form.style.cssText = `
       display:none;
       flex-direction:column;
       gap:8px;
+      margin-bottom:10px;
       padding:12px;
-      background:#161616;
       border:1px solid #222;
-      border-radius:8px;
-      margin-bottom:8px;
+      background:#161616;
+      border-radius:10px;
     `;
 
     form.innerHTML = `
-      <div id="stars-int-${pid}"
-        style="display:flex;gap:2px;direction:ltr;cursor:pointer;"
-        data-val="0">
 
-        ${[1,2,3,4,5].map(function(s){
-
-          return `
-            <span
-              data-v="${s}"
-              onclick="pickStar('${pid}',${s})"
-              onmouseenter="hoverStar('${pid}',${s})"
-              onmouseleave="unhoverStar('${pid}')"
-              style="
-                font-size:24px;
-                color:#444;
-                line-height:1;
-                transition:color .1s;
-              ">
-              ★
-            </span>
-          `;
-
-        }).join('')}
-
+      <div
+        id="stars-int-${pid}"
+        data-val="5"
+        style="
+          display:flex;
+          gap:4px;
+          direction:ltr;
+        ">
       </div>
 
       <input
@@ -226,13 +266,10 @@ async function initProductRatings() {
         style="
           background:#000;
           border:1px solid #222;
-          border-radius:6px;
           color:#fff;
-          padding:8px 10px;
+          border-radius:6px;
+          padding:10px;
           font-family:Cairo,sans-serif;
-          font-size:.82rem;
-          outline:none;
-          width:100%;
         "
       />
 
@@ -243,150 +280,136 @@ async function initProductRatings() {
         style="
           background:#000;
           border:1px solid #222;
-          border-radius:6px;
           color:#fff;
-          padding:8px 10px;
-          font-family:Cairo,sans-serif;
-          font-size:.82rem;
-          outline:none;
-          width:100%;
+          border-radius:6px;
+          padding:10px;
           resize:none;
+          font-family:Cairo,sans-serif;
         "
       ></textarea>
 
-      <div id="rmsg-${pid}"
-        style="
-          display:none;
-          color:#4caf50;
-          font-weight:700;
-          font-size:.82rem;
-          text-align:center;
-        ">
-        ✅ شكراً على تقييمك!
-      </div>
-
       <button
-        onclick="submitProductReview('${pid}','${productName}')"
+        onclick="submitProductReview('${pid}', '${productName.replace(/'/g,"\\'")}')"
         style="
           background:#e00000;
           color:#fff;
           border:none;
           border-radius:6px;
-          padding:8px;
+          padding:10px;
           font-family:Cairo,sans-serif;
           font-weight:700;
-          font-size:.82rem;
           cursor:pointer;
         ">
         إرسال التقييم
       </button>
+
+      <div
+        id="rmsg-${pid}"
+        style="
+          display:none;
+          color:#4caf50;
+          text-align:center;
+          font-weight:700;
+        ">
+        ✅ تم إرسال التقييم
+      </div>
+
     `;
 
     body.insertBefore(form, footer);
 
-  });
+    const starsWrap = form.querySelector(`#stars-int-${pid}`);
 
-}
+    for (let i = 1; i <= 5; i++) {
 
-function toggleRateForm(pid){
+      const star = document.createElement('span');
 
-  var form = document.getElementById('rate-form-'+pid);
+      star.innerHTML = '★';
 
-  var toggle = document.getElementById('rate-toggle-'+pid);
+      star.dataset.v = i;
 
-  if(!form) return;
+      star.style.cssText = `
+        font-size:28px;
+        cursor:pointer;
+        color:${i <= 5 ? '#f5a623' : '#444'};
+      `;
 
-  var isOpen = form.style.display === 'flex';
+      star.addEventListener('click', function(){
 
-  form.style.display = isOpen ? 'none' : 'flex';
+        starsWrap.dataset.val = i;
 
-  if(toggle) toggle.textContent = isOpen ? '+ قيّم' : 'إلغاء';
+        starsWrap.querySelectorAll('span').forEach(function(s){
 
-}
+          s.style.color =
+            parseInt(s.dataset.v) <= i
+            ? '#f5a623'
+            : '#444';
 
-function pickStar(pid,val){
+        });
 
-  var c=document.getElementById('stars-int-'+pid);
+      });
 
-  if(!c)return;
+      starsWrap.appendChild(star);
 
-  c.dataset.val=val;
-
-  c.querySelectorAll('span').forEach(function(s){
-
-    s.style.color=parseInt(s.dataset.v)<=val?'#f5a623':'#444';
-
-  });
-
-}
-
-function hoverStar(pid,val){
-
-  var c=document.getElementById('stars-int-'+pid);
-
-  if(!c)return;
-
-  c.querySelectorAll('span').forEach(function(s){
-
-    s.style.color=parseInt(s.dataset.v)<=val?'#f5a623':'#444';
-
-  });
-
-}
-
-function unhoverStar(pid){
-
-  var c=document.getElementById('stars-int-'+pid);
-
-  if(!c)return;
-
-  var sel=parseInt(c.dataset.val)||0;
-
-  c.querySelectorAll('span').forEach(function(s){
-
-    s.style.color=parseInt(s.dataset.v)<=sel?'#f5a623':'#444';
+    }
 
   });
 
 }
 
 /* =========================
-   إرسال تقييم المنتج
+   فتح وغلق الفورم
 ========================= */
 
-async function submitProductReview(pid, productName){
+function toggleRateForm(pid) {
 
-  var c=document.getElementById('stars-int-'+pid);
+  const form = document.getElementById(`rate-form-${pid}`);
 
-  var authorEl=document.getElementById('ra-'+pid);
+  const btn = document.getElementById(`rate-toggle-${pid}`);
 
-  var commentEl=document.getElementById('rc-'+pid);
+  if (!form) return;
 
-  var msgEl=document.getElementById('rmsg-'+pid);
+  const open = form.style.display === 'flex';
 
-  if(!c||!authorEl)return;
+  form.style.display = open ? 'none' : 'flex';
 
-  var rating=parseInt(c.dataset.val)||0;
+  if (btn) {
 
-  var author=authorEl.value.trim();
+    btn.textContent = open ? '+ قيّم' : 'إلغاء';
 
-  if(!rating){
+  }
 
-    alert('⭐ اختار عدد النجوم');
+}
+
+/* =========================
+   إرسال تقييم منتج
+========================= */
+
+async function submitProductReview(pid, productName) {
+
+  const starsWrap = document.getElementById(`stars-int-${pid}`);
+
+  const authorEl = document.getElementById(`ra-${pid}`);
+
+  const commentEl = document.getElementById(`rc-${pid}`);
+
+  const msgEl = document.getElementById(`rmsg-${pid}`);
+
+  const rating = parseInt(starsWrap.dataset.val) || 5;
+
+  const author = authorEl.value.trim();
+
+  const comment = commentEl.value.trim();
+
+  if (!author) {
+
+    showToast("✏️ اكتب اسمك");
 
     return;
 
   }
 
-  if(!author){
-
-    alert('✏️ اكتب اسمك');
-
-    return;
-
-  }
-
-  await saveReview({
+  const result = await saveReview({
 
     productId: pid,
 
@@ -396,37 +419,47 @@ async function submitProductReview(pid, productName){
 
     rating: rating,
 
-    comment: commentEl ? commentEl.value.trim() : '',
+    comment: comment,
 
     date: new Date().toLocaleDateString('ar-EG')
 
   });
 
-  if(msgEl) msgEl.style.display='block';
+  if (result.success) {
 
-  setTimeout(function(){
+    msgEl.style.display = 'block';
 
-    location.reload();
+    showToast("✅ تم إرسال التقييم");
 
-  },1000);
+    setTimeout(() => {
+
+      location.reload();
+
+    }, 1200);
+
+  } else {
+
+    showToast("❌ فشل الإرسال");
+
+  }
 
 }
 
 /* =========================
-   قائمة التقييمات
+   صفحة التقييمات
 ========================= */
 
-async function renderReviewsList(){
+async function renderReviewsList() {
 
-  var container=document.getElementById('reviewsList');
+  const container = document.getElementById('reviewsList');
 
-  if(!container)return;
+  if (!container) return;
 
-  var reviews=await getAllReviews();
+  const reviews = await getAllReviews();
 
-  if(!reviews.length){
+  if (!reviews.length) {
 
-    container.innerHTML=`
+    container.innerHTML = `
       <div style="
         text-align:center;
         padding:60px 20px;
@@ -448,25 +481,29 @@ async function renderReviewsList(){
   container.innerHTML = reviews.map(function(r){
 
     return `
+
       <div style="
         background:var(--card);
         border:1px solid var(--border);
         border-radius:12px;
         padding:20px;
-        margin-bottom:14px;
+        margin-bottom:15px;
       ">
 
         <div style="
           display:flex;
           justify-content:space-between;
-          margin-bottom:8px;
-          flex-wrap:wrap;
           gap:10px;
+          margin-bottom:10px;
+          flex-wrap:wrap;
         ">
 
           <div>
 
-            <div style="font-weight:800;">
+            <div style="
+              font-weight:800;
+              margin-bottom:5px;
+            ">
               ${r.author}
             </div>
 
@@ -480,19 +517,20 @@ async function renderReviewsList(){
           </div>
 
           <div>
-            ${renderStars(r.rating,14)}
+            ${renderStars(Number(r.rating), 15)}
           </div>
 
         </div>
 
-        <p style="
-          color:var(--light);
-          line-height:1.7;
+        <div style="
+          color:#ddd;
+          line-height:1.8;
         ">
           ${r.comment || 'بدون تعليق'}
-        </p>
+        </div>
 
       </div>
+
     `;
 
   }).join('');
@@ -500,71 +538,53 @@ async function renderReviewsList(){
 }
 
 /* =========================
-   صفحة التقييمات
+   فورم صفحة التقييمات
 ========================= */
 
-function initReviewForm(){
+function initReviewForm() {
 
-  var form=document.getElementById('reviewPageForm');
+  const form = document.getElementById('reviewPageForm');
 
-  if(!form)return;
+  if (!form) return;
 
-  var starsContainer=document.getElementById('formStars');
+  const starsContainer = document.getElementById('formStars');
 
-  if(starsContainer){
+  if (starsContainer) {
 
-    starsContainer.dataset.val='0';
+    starsContainer.dataset.val = "5";
 
-    starsContainer.innerHTML=[1,2,3,4,5].map(function(s){
+    for (let i = 1; i <= 5; i++) {
 
-      return `
-        <span
-          data-v="${s}"
-          style="
-            font-size:32px;
-            color:#444;
-            cursor:pointer;
-            line-height:1;
-          ">
-          ★
-        </span>
+      const star = document.createElement('span');
+
+      star.innerHTML = '★';
+
+      star.dataset.v = i;
+
+      star.style.cssText = `
+        font-size:32px;
+        color:#f5a623;
+        cursor:pointer;
       `;
 
-    }).join('');
+      star.addEventListener('click', function(){
 
-    starsContainer.querySelectorAll('span').forEach(function(star){
-
-      star.addEventListener('mouseenter',function(){
-
-        var v=parseInt(star.dataset.v);
+        starsContainer.dataset.val = i;
 
         starsContainer.querySelectorAll('span').forEach(function(s){
 
-          s.style.color=parseInt(s.dataset.v)<=v?'#f5a623':'#444';
+          s.style.color =
+            parseInt(s.dataset.v) <= i
+            ? '#f5a623'
+            : '#444';
 
         });
 
       });
 
-      star.addEventListener('mouseleave',function(){
+      starsContainer.appendChild(star);
 
-        var sel=parseInt(starsContainer.dataset.val)||0;
-
-        starsContainer.querySelectorAll('span').forEach(function(s){
-
-          s.style.color=parseInt(s.dataset.v)<=sel?'#f5a623':'#444';
-
-        });
-
-      });
-
-      star.addEventListener('click',function(){
-
-        starsContainer.dataset.val=star.dataset.v;
-
-      });
-
-    });
+    }
 
   }
 
@@ -572,26 +592,30 @@ function initReviewForm(){
 
     e.preventDefault();
 
-    var pid=document.getElementById('fpid').value;
+    const pid = document.getElementById('fpid').value;
 
-    var author=document.getElementById('fauthor').value.trim();
+    const author = document.getElementById('fauthor').value.trim();
 
-    var comment=document.getElementById('fcomment').value.trim();
+    const comment = document.getElementById('fcomment').value.trim();
 
-    var rating=starsContainer?parseInt(starsContainer.dataset.val)||0:0;
+    const rating =
+      parseInt(starsContainer.dataset.val) || 5;
 
-    var productName=document.getElementById('fpid')
-      .options[document.getElementById('fpid').selectedIndex].text;
+    const productName =
+      document.getElementById('fpid')
+      .options[
+        document.getElementById('fpid').selectedIndex
+      ].text;
 
-    if(!pid||!author||!rating){
+    if (!pid || !author) {
 
-      alert('⭐ أكمل البيانات');
+      showToast("⭐ أكمل البيانات");
 
       return;
 
     }
 
-    await saveReview({
+    const result = await saveReview({
 
       productId: pid,
 
@@ -607,45 +631,51 @@ function initReviewForm(){
 
     });
 
-    var msg=document.getElementById('formMsg');
+    if (result.success) {
 
-    if(msg) msg.style.display='block';
+      document.getElementById('formMsg').style.display = 'block';
 
-    form.reset();
+      showToast("✅ تم إرسال التقييم");
 
-    setTimeout(function(){
+      setTimeout(() => {
 
-      location.reload();
+        location.reload();
 
-    },1000);
+      }, 1200);
+
+    } else {
+
+      showToast("❌ فشل إرسال التقييم");
+
+    }
 
   });
 
 }
 
 /* =========================
-   هامبرجر
+   القائمة الجانبية
 ========================= */
 
-function initHamburger(){
+function initHamburger() {
 
-  var btn=document.getElementById('hamburgerBtn');
+  const btn = document.getElementById('hamburgerBtn');
 
-  var menu=document.getElementById('mobileMenu');
+  const menu = document.getElementById('mobileMenu');
 
-  if(!btn||!menu)return;
+  if (!btn || !menu) return;
 
-  btn.addEventListener('click',function(){
+  btn.addEventListener('click', function(){
 
-    var isOpen=menu.classList.contains('open');
+    const open = menu.classList.contains('open');
 
-    if(isOpen){
+    if (open) {
 
       menu.classList.remove('open');
 
       btn.classList.remove('open');
 
-      document.body.style.overflow='';
+      document.body.style.overflow = '';
 
     } else {
 
@@ -653,7 +683,7 @@ function initHamburger(){
 
       btn.classList.add('open');
 
-      document.body.style.overflow='hidden';
+      document.body.style.overflow = 'hidden';
 
     }
 
@@ -665,15 +695,15 @@ function initHamburger(){
    تشغيل
 ========================= */
 
-document.addEventListener('DOMContentLoaded',function(){
-
-  initProductRatings();
+document.addEventListener('DOMContentLoaded', async function(){
 
   initHamburger();
 
-  if(document.getElementById('reviewsList')){
+  await initProductRatings();
 
-    renderReviewsList();
+  if (document.getElementById('reviewsList')) {
+
+    await renderReviewsList();
 
     initReviewForm();
 
