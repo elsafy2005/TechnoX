@@ -19,13 +19,34 @@
       <li><a href="accessories.html" class="active">إكسسوارات</a></li>
       <li><a href="game-topup.html">شحن الألعاب</a></li>
       <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
       <li><a href="contact.html">تواصل معنا</a></li>
     </ul>
     <div class="nav-right">
       <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html" class="active">إكسسوارات</a></li>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html">التقييمات</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
 
 <main>
   <div class="page-header">
@@ -557,7 +578,7 @@
         </div>
 
         
-                        <div class="product-card" data-cat="extensions">
+          <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
             <img src="https://tse4.mm.bing.net/th/id/OIP.jCOxPRypBPysNm--V_t40gHaFZ?w=1000&h=728&rs=1&pid=ImgDetMain&o=7&rm=3"
                  alt="Mobile Rack Sata WD USB 2" loading="lazy" />
@@ -574,7 +595,7 @@
         </div>
 
         
-                        <div class="product-card" data-cat="extensions">
+          <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
             <img src="https://tse4.mm.bing.net/th/id/OIP.jCOxPRypBPysNm--V_t40gHaFZ?w=1000&h=728&rs=1&pid=ImgDetMain&o=7&rm=3"
                  alt="Mobile Rack Sata WD USB 3" loading="lazy" />
@@ -585,7 +606,7 @@
             <div class="product-specs">  PC | Black</div>
             <div class="product-footer">
               <div><div class="product-price">180 ج</div><span class="badge badge-in">متوفر</span></div>
-              <button class="btn-add" onclick="addToCart('wd-mobile-rack','Mobile Rack Sata WD USB 3',180,'🎮')">+ أضف</button>
+              <button class="btn-add" onclick="addToCart('wd-mobile-rack usb 3','Mobile Rack Sata WD USB 3',180,'🎮')">+ أضف</button>
             </div>
           </div>
         </div>
@@ -609,7 +630,7 @@
         </div>
 
 
-                        <div class="product-card" data-cat="extensions">
+         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
             <img src="https://pakistanstore.pk/wp-content/uploads/2020/09/Mini-Bluetooth-USB.jpg"
                  alt="Bluetooth Mini Usb " loading="lazy" />
@@ -620,7 +641,7 @@
             <div class="product-specs"> Bluetooth | PC </div>
             <div class="product-footer">
               <div><div class="product-price">140 ج</div><span class="badge badge-in">متوفر</span></div>
-              <button class="btn-add" onclick="addToCart('zero-dbl-ctrl','Bluetooth Mini Usb 5.1',140,'🎮')">+ أضف</button>
+              <button class="btn-add" onclick="addToCart('zero bluetooth-ctrl','Bluetooth Mini Usb 5.1',140,'🎮')">+ أضف</button>
             </div>
           </div>
         </div>
@@ -756,5 +777,6 @@ function filterAcc(cat, btn) {
   });
 }
 </script>
+<script src="js/ratings.js"></script>
 </body>
 </html>

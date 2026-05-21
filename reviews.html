@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoX | التقييمات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html">إكسسوارات</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html" class="active">التقييمات</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html">إكسسوارات</a></li>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html" class="active">التقييمات</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>التقييمات</span></div>
+      <h1 class="page-title">⭐ التقييمات</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="reviews-layout">
+
+        <!-- Reviews list -->
+        <div>
+          <h2 style="font-size:1.3rem;font-weight:900;margin-bottom:20px;">آراء العملاء</h2>
+          <div id="reviewsList">
+            <div style="text-align:center;padding:60px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;">
+              <div style="font-size:3rem;margin-bottom:12px;">💬</div>
+              <p style="color:var(--gray);">جارٍ التحميل...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit form -->
+        <div class="reviews-form-sticky" style="position:sticky;top:80px;">
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;">
+            <h3 style="font-size:1.2rem;font-weight:900;margin-bottom:20px;">✍️ أضف تقييمك</h3>
+            <form id="reviewPageForm">
+              <div class="form-group">
+                <label>المنتج *</label>
+                <select id="fpid" required>
+                  <option value="">اختر المنتج</option>
+                  <optgroup label="الألعاب">
+                    <option value="gta5">GTA V</option>
+                    <option value="tsushima">Ghost of Tsushima</option>
+                    <option value="ragnarok">God of War Ragnarok</option>
+                    <option value="wolong">Wo Long</option>
+                    <option value="fifa22">FIFA 22</option>
+                    <option value="sekiro">Sekiro-Shadows Die Twice</option>
+                    <option value="daysgone">DAYS GONE</option>
+                    <option value="mafia3">MAFIA III</option>
+                    <option value="maxpayne3">Max Payne 3</option>
+                    <option value="hks">Hollow Knight Silksong</option>
+                    <option value="grw">Tom Clancy's Ghost Recon - Wildlands</option>
+                    <option value="hitman3">HITMAN 3</option>
+                    <option value="awayout">A Way Out</option>
+                    <option value="alanwake">Alan Wake Remastered</option>
+                    <option value="assassinscreedodyssey">Assassin's Creed - Odyssey</option>
+                    <option value="assassinscreedbrotherhood">Assassin's Creed Brotherhood</option>
+                    <option value="assassinscreediv">Assassin's Creed IV Black Flag</option>
+                    <option value="assassinscreedliberation">Assassin's Creed Liberation HD</option>
+                    <option value="assassinscreedrogue">Assassin's Creed Rogue</option>
+                    <option value="battlefieldv">Battlefield V</option>
+                    <option value="ben10powertrip">Ben 10 PowerTrip</option>
+                    <option value="callofduty_mw2">Call of Duty - Modern Warfare II</option>
+                  </optgroup>
+                  <optgroup label="إكسسوارات">
+                    <option value="gigamax-headphone">Gigamax Gaming Headphone (2 Socket)</option>
+                    <option value="gigamax-headphone-1socket">Gigamax Gaming Headphone (1 Socket)</option>
+                    <option value="a43">A43 Stereo Gaming Headset</option>
+                    <option value="zero-zr180">Zero ZR-180 Wired Mouse</option>
+                    <option value="wireless-rgb-mouse">Wireless RGB Gaming Mouse</option>
+                    <option value="gigamax-gm6">GIGAMAX plus Wired GM-6</option>
+                    <option value="zero-rgb">Keyboard ZERO RGB LED ZR-2030</option>
+                    <option value="zero-ctrl">ZERO Wireless Controller Ps3</option>
+                    <option value="doubleshock-ctrl">Doubleshock PlayStation 4 Controller</option>
+                  </optgroup>
+                  <optgroup label="كمبيوتر مكتبي">
+                    <option value="pc-hdd-500gb">HDD 500 GB</option>
+                    <option value="ram-4gb-ddr3">RAM 4GB DDR3</option>
+                    <option value="gpu-gtx-750ti">GPU GTX Nvidia 750 TI 2 GB</option>
+                    <option value="ssd-128gb">SSD 128 GB</option>
+                    <option value="monitor-hp-elite">HP EliteDisplay E202 20 Inch Monitor</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>اسمك *</label>
+                <input type="text" id="fauthor" placeholder="اسمك" required />
+              </div>
+              <div class="form-group">
+                <label>التقييم *</label>
+                <div id="formStars" style="display:flex;gap:4px;direction:ltr;margin-top:4px;"></div>
+              </div>
+              <div class="form-group">
+                <label>التعليق (اختياري)</label>
+                <textarea id="fcomment" placeholder="شاركنا رأيك في المنتج..." rows="3"></textarea>
+              </div>
+              <div id="formMsg" style="display:none;background:#0a2a0a;border:1px solid #1a4a1a;color:#4caf50;border-radius:8px;padding:12px;text-align:center;font-weight:700;margin-bottom:14px;">
+                🎉 شكراً على تقييمك! تمت الإضافة.
+              </div>
+              <button type="submit" class="form-submit">إرسال التقييم ⭐</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">TECHNO<span class="x">X</span></div>
+        <p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p>
+      </div>
+      <div>
+        <div class="footer-heading">الصفحات</div>
+        <ul class="footer-links">
+          <li><a href="games.html">الألعاب</a></li>
+          <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+          <li><a href="accessories.html">إكسسوارات</a></li>
+          <li><a href="reviews.html">التقييمات</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">خدمات</div>
+        <ul class="footer-links">
+          <li><a href="game-topup.html">شحن الألعاب</a></li>
+          <li><a href="services.html">الصيانة</a></li>
+          <li><a href="cart.html">عربة التسوق</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">تواصل</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="tel:01060842931">01060842931</a></li>
+          <li><a href="https://wa.me/201060842931">واتساب</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span>
+      <span>متجر الكمبيوتر والألعاب</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/ratings.js"></script>
+</body>
+</html>

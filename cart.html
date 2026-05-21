@@ -19,13 +19,34 @@
       <li><a href="accessories.html">إكسسوارات</a></li>
       <li><a href="game-topup.html">شحن الألعاب</a></li>
       <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
       <li><a href="contact.html">تواصل معنا</a></li>
     </ul>
     <div class="nav-right">
       <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html">إكسسوارات</a></li>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html">التقييمات</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
 
 <main>
   <div class="page-header">
@@ -202,5 +223,6 @@ function placeOrder(e) {
 
 document.addEventListener('DOMContentLoaded', renderCart);
 </script>
+<script src="js/ratings.js"></script>
 </body>
 </html>
