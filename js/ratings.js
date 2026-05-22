@@ -5,7 +5,7 @@
 //  ضع رابط Web App بتاع Google Apps Script هنا:
 // ============================================================
 
-var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwmKrQKYhqHrffKtsbOyz8j8P7Cg3KeOzl-Hbu5J8vgtpkTyVebQGZrTRtpaIMZbYlWbg/exec';
+var SHEET_URL = 'https://script.google.com/macros/s/AKfycbyFJ5pcJwRiTtq_y-kaaOF3D59PUu0EDg1crINBKXBLTLftsICOnTONEghqiDYL_ixfXg/exec';
 
 // ── Cache في الذاكرة ────────────────────────────────────────
 var _ratingsCache = {};
