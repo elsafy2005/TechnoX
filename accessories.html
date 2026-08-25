@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechnoX | إكسسوارات</title>
+  <title>4R | إكسسوارات</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -11,12 +11,13 @@
 
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <a href="index.html" class="logo">4<span class="x">R</span></a>
     <ul class="nav-links">
       <li><a href="index.html">الرئيسية</a></li>
       <li><a href="games.html">الألعاب</a></li>
       <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
-      <li><a href="accessories.html" class="active">إكسسوارات</a></li>
+      <li><a href="accessories.html" class="active" >إكسسوارات كمبيوتر</a></li>
+    <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
       <li><a href="game-topup.html">شحن الألعاب</a></li>
       <li><a href="services.html">الصيانة</a></li>
       <li><a href="reviews.html">التقييمات</a></li>
@@ -36,7 +37,8 @@
     <li><a href="index.html">الرئيسية</a></li>
     <li><a href="games.html">الألعاب</a></li>
     <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
-    <li><a href="accessories.html" class="active">إكسسوارات</a></li>
+    <li><a href="accessories.html" class="active" >إكسسوارات كمبيوتر</a></li>
+    <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
     <li><a href="game-topup.html">شحن الألعاب</a></li>
     <li><a href="services.html">الصيانة</a></li>
     <li><a href="reviews.html">التقييمات</a></li>
@@ -63,6 +65,7 @@
       <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('mouse',this)">ماوس</button>
       <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('keyboard',this)">كيبورد</button>
             <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('cables',this)">كبلات</button>
+            <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('usb',this)">فلاشات</button>
                   <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('extensions',this)">ملحقات</button>
       <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('controller',this)">كنترولر</button>
     </div>
@@ -75,7 +78,7 @@
       
         <div class="product-card" data-cat="headset">
           <div class="product-thumb">
-            <img src="https://th.bing.com/th/id/R.8169ee0ae745d11b8834fbec943b3fdf?rik=bGb4jzq860Txrg&riu=http%3a%2f%2fkimostore.net%2fcdn%2fshop%2ffiles%2fGigamaxPlusY-888GamingHeadset.jpg%3fv%3d1742714881&ehk=cbus5PwZ6GNTzlyFCJwSR%2fq5Rv1YT5KSLiOl%2fdbor8M%3d&risl=&pid=ImgRaw&r=0"
+            <img src="https://imgs.search.brave.com/C-HHiCXnGyRlsSJP_Y7JTyoOShP99-Jx5o-BW8uI3ZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tb3Rh/amVyLmItY2RuLm5l/dC91cGxvYWRzL2Fs/ZXhzdG9yZS9wcm9k/dWN0cy8xNzQzOTYx/NTI1ODM2LmpwZw"
                  alt="Gigamax Gaming Headphone" loading="lazy" />
           </div>
           <div class="product-body">
@@ -91,7 +94,7 @@
 
         <div class="product-card" data-cat="headset">
           <div class="product-thumb">
-            <img src="https://th.bing.com/th/id/R.e5564a4646fe95042e1d36ca468300bb?rik=DjTNB5%2bpcvnVyA&riu=http%3a%2f%2fdar-elcomputer.com%2fcdn%2fshop%2ffiles%2f15.......jpg%3fv%3d1722248050&ehk=k2JtKZIlM3Hdx11P2OGyOgJHjMjrFlgI1ceLCp0qPbI%3d&risl=&pid=ImgRaw&r=0"
+            <img src="https://imgs.search.brave.com/mkt7ceOCmpa8wfE5EsVG2fIez55HjySDKCD3ozhunZs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tb3Rh/amVyLmItY2RuLm5l/dC91cGxvYWRzL2Fs/ZXhzdG9yZS9wcm9k/Y3V0cy8xNjYwMzI2/NTcxMzMxLndlYnA"
                  alt="Gigamax Gaming Headphone with 1 Socket" loading="lazy" />
           </div>
           <div class="product-body">
@@ -121,7 +124,55 @@
           </div>
         </div>
 
+        <div class="product-card" data-cat="headset">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/D2Zzp_MJJ2iQcdfqRyLRMGfkqmUdv2q_LEdyqRBPXuk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYWt0/YWJha3cuY29tL2Nk/bi9zaG9wL2ZpbGVz/LzY5MzIzOTE5MTI5/NjYucG5nP3Y9MTc3/NzU3NjA5NCZ3aWR0/aD0xOTQ2"
+                 alt="XTRIKE ME Headset XT ME GH-509" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">gaming</div>
+            <div class="product-name">XTRIKE ME Headset GH-509 </div>
+            <div class="product-specs">صوت stereo | مايك عازل | مريح لجلسات طويلة</div>
+            <div class="product-footer">
+              <div><div class="product-price">600 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('GH-509','XTRIKE ME Headset XT GH-509',600,'🎧')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
    
+        <div class="product-card" data-cat="mouse">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/x2z2-EXy-xg_2l_c1JVt1O-p8u9nUYkmbZguw8ln9_U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iYXRv/bHN0b3JlLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyNS8w/NS9zMjAtMi5wbmc"
+                 alt="Mouse USB Gaming RGB AULA S20" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALUA</div>
+            <div class="product-name"> Mouse USB Gaming RGB AULA S20</div>
+            <div class="product-specs"> DPI | RGB | وزن  خفيف</div>
+            <div class="product-footer">
+              <div><div class="product-price">300 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALUA S20','Mouse USB Gaming RGB AULA S20',300,'🖱️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+<div class="product-card" data-cat="mouse">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/SONf44gcVPJOeavkt5D7OATbX97vkyc14u4jVw7Nc_U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFhSS1aOXBBZUwu/anBn"
+                 alt="Fox x100 Wired Mouse " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Fox</div>
+            <div class="product-name"> Fox x100 Wired Mouse</div>
+            <div class="product-specs"> DPI | RGB | وزن  خفيف</div>
+            <div class="product-footer">
+              <div><div class="product-price">120 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('fox-x100','Fox x100 Wired Mouse',120,'🖱️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
         <div class="product-card" data-cat="mouse">
           <div class="product-thumb">
             <img src="https://tse3.mm.bing.net/th/id/OIP.oKF8g6QHvfGW3noFSmgnfAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
@@ -202,6 +253,53 @@
           </div>
         </div>
 
+        <div class="product-card" data-cat="keyboard">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/Hx0mv7swTT-vfNYxu3BRXZ-HTMeC_rGJDda0LCGnsAU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFhdlJvRVlNK0wu/anBn"
+                 alt="Utopia BA-505 Gaming Keyboard with Rainbow LED" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">UTOPIA</div>
+            <div class="product-name">Utopia BA-505 Gaming Keyboard with Rainbow LED</div>
+            <div class="product-specs">RGB | Arabic support</div>
+            <div class="product-footer">
+              <div><div class="product-price">300 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('utopia','Utopia BA-505 Gaming Keyboard with Rainbow LED',300,'⌨️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="keyboard">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/QaQKm-e4CwaG5F8aaRwhmn1CHJgemqNHAO-OPhPcdxU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFWVWZUemZ4YlMu/anBn"
+                 alt="Keyboard Admin Technolgy AD-2000 RGB" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ADMIN</div>
+            <div class="product-name">Keyboard Admin Technolgy AD-2000 RGB</div>
+            <div class="product-specs">RGB | Arabic support</div>
+            <div class="product-footer">
+              <div><div class="product-price">280 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ADMIN','Keyboard Admin Technolgy AD-2000 RGB',280,'⌨️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="keyboard">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/25Rrkik2z72IzWlAjsnH1l-v3NPhSBTfXvkvBAMQND8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbG9y/b2J5LmNvbS9wdWJs/aWMvdXBsb2Fkcy9h/bGwvYjFYWHpYelFO/c0hUbWxQV3ZJR3BB/WXR0Z3RzZFlxd1Ro/Um1SV2hBYS5wbmc"
+                 alt="Keyboard NJ-KC301" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">NJ-KC301</div>
+            <div class="product-name">Keyboard NJ-KC301</div>
+            <div class="product-specs"> مريح | Arabic support</div>
+            <div class="product-footer">
+              <div><div class="product-price">280 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('NJ-KC301','Keyboard NJ-KC301',280,'⌨️')">+ أضف</button>
+            </div>
+          </div>
+        </div>
 
         <div class="product-card" data-cat="keyboard">
           <div class="product-thumb">
@@ -237,7 +335,7 @@
 
         <div class="product-card" data-cat="keyboard">
           <div class="product-thumb">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.bpH11KN6pbdgZ1pRLSo5wwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+            <img src="https://kimostore.net/cdn/shop/files/VestaKB-47020WiredKeyboardEnglish_Arabic_1.jpg?v=1775051760"
                  alt="Vesta KB-47020 Wired Keyboard English & Arabic" loading="lazy" />
           </div>
           <div class="product-body">
@@ -267,7 +365,22 @@
           </div>
         </div>
 
-   
+        <div class="product-card" data-cat="controller">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/cCL5e5KIhtPsNbYD1YHNwp2QVAPO6otx8FajN-WbhQI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lZy5q/dW1pYS5pcy91bnNh/ZmUvZml0LWluLzUw/MHg1MDAvZmlsdGVy/czpmaWxsKHdoaXRl/KS9wcm9kdWN0Lzc0/LzQ5MjYzMi8xLmpw/Zz85MDA3"
+                 alt="Utopia 7 In 1 Wireless Gamepad - Red" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">UTOPIA</div>
+            <div class="product-name">Utopia 7 In 1 Wireless Gamepad - Red</div>
+            <div class="product-specs"> PS4 | PC | wireless </div>
+            <div class="product-footer">
+              <div><div class="product-price">650 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('UTOPIA','Utopia 7 In 1 Wireless Gamepad - Red',650,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
         <div class="product-card" data-cat="controller">
           <div class="product-thumb">
             <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/145042/1.jpg?4406"
@@ -286,7 +399,7 @@
 
         <div class="product-card" data-cat="controller">
           <div class="product-thumb">
-            <img src="https://th.bing.com/th/id/R.8f388c9f7120bd3003342951de45fddf?rik=rB6ZFkwNdrW7Tg&riu=http%3a%2f%2fwww.platinum-jo.com%2fphotos%2f3309.png&ehk=v21sULG6j5aGc2gF29matuEKT5KzvVyTYxYJH%2bJ1xj4%3d&risl=&pid=ImgRaw&r=0"
+            <img src="https://imgs.search.brave.com/CGn8YWVCljQZothhwITW61e-p3rkyiqc8gj4m-9yR8Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGxhdGludW0tam8u/Y29tL3Bob3Rvcy8z/MzA5LnBuZw"
                  alt="Doubleshock PlayStation 4 Wireless Controller Copy" loading="lazy" />
           </div>
           <div class="product-body">
@@ -328,6 +441,70 @@
             <div class="product-footer">
               <div><div class="product-price">280 ج</div><span class="badge badge-in">متوفر</span></div>
               <button class="btn-add" onclick="addToCart('zero-dbl-ctrl','ZERO DOUBLE ZR-4001 with Analog',280,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="usb">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/wy2o6DvM6CwtNnX50eSaryN1iZNRRI9zJf2usyB_y2k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tb3Rh/amVyLmItY2RuLm5l/dC91cGxvYWRzL2Fs/ZXhzdG9yZS9wcm9k/dWN0cy8xNzgwNTE0/MDA1MzE4LmpwZw"
+                 alt="Flash Memory Kingmax 8GB USB 2.0" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">KINGMAX</div>
+            <div class="product-name">Flash Memory Kingmax 8GB USB 2.0</div>
+            <div class="product-specs"> Speed | PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">220 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Kingmax-ctrl','Flash Memory Kingmax 8GB USB 2.0',220,'🎦')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="usb">
+          <div class="product-thumb">
+            <img src="https://m.media-amazon.com/images/I/61JyxWxhd6L._AC_UF894,1000_QL80_.jpg"
+                 alt="Flash Memory Kingmax 16GB USB 2.0" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">KINGMAX</div>
+            <div class="product-name">Flash Memory Kingmax 16GB USB 2.0</div>
+            <div class="product-specs"> Speed | PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">265 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('KINGMAX-dbl-ctrl','Flash Memory Kingmax 16GB USB 2.0',265,'🎦')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="usb">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/3084431/1.jpg?6984"
+                 alt="X-SCOOT High-quality 32GB metal flash drive" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">XSCOOT</div>
+            <div class="product-name">X-SCOOT High-quality 32GB metal flash drive</div>
+            <div class="product-specs"> HighSpeed | PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">325 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('X-dbl-ctrl','X-SCOOT High-quality 32GB metal flash drive',325,'🎦')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="usb">
+          <div class="product-thumb">
+            <img src="https://m.media-amazon.com/images/I/31PC8S2oUbS.jpg"
+                 alt=" Microsd X-scoot 16 GB" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">X-SCOOT</div>
+            <div class="product-name"> Microsd X-scoot 16 GB</div>
+            <div class="product-specs"> Speed | PHONE </div>
+            <div class="product-footer">
+              <div><div class="product-price">260 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('xscoot-dbl-ctrl',' Microsd X-scoot 16 GB',260,'🎦')">+ أضف</button>
             </div>
           </div>
         </div>
@@ -476,6 +653,87 @@
           </div>
         </div>
 
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/s92hGmsAZNarYZMuNWmVzZS3F5EoW-k1s0gUkWlx-lM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJv/Y2RhdGFzaG93LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/NC8xMC9jYWJsZS1o/ZG1pLTRrLTE1bS1t/YWluLTUuanBn"
+                 alt="Cable HDMI 4K 1,5M" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Pro Series</div>
+            <div class="product-name">Cable HDMI 4K 1,5M</div>
+            <div class="product-specs">PC</div>
+            <div class="product-footer">
+              <div><div class="product-price">100 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Cable HDMI 4K','Cable HDMI 4K 1,5M',100,'🖥')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/T-UHXLV8KnFQBKn4TVOIuxEPJdo_9tgg1rn7mvNycSM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS56aWQuc3RvcmUv/dGh1bWJzL2NkZWEx/OWY2LWIwZjgtNDUz/YS05MWVkLWEyOTNh/YzM3ZGUzMC9hMjc3/NjQ2MS00NzMzLTRh/NzQtYmQ0MC1lNzMw/YjExYjYxMTMtdGh1/bWJuYWlsLTEwMDB4/MTAwMC5wbmc"
+                 alt="Cable HDMI 4K 3 M" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Pro Series</div>
+            <div class="product-name">Cable HDMI 4K 3 M</div>
+            <div class="product-specs">PC</div>
+            <div class="product-footer">
+              <div><div class="product-price">140 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Cable HDMI 4K ','Cable HDMI 4K 3 M',140,'🖥')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/pNMlNjOa7pbgOJAy8UNi4Ch5XkiXXng-LP0ZRPb1lOM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzk1NDMzMC1NTEE1/NDAzMDUxNjk5NV8w/MjIwMjMtVi53ZWJw"
+                 alt="Cable VGA 5M " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Admin</div>
+            <div class="product-name">Cable VGA 5M </div>
+            <div class="product-specs">PC</div>
+            <div class="product-footer">
+              <div><div class="product-price">180 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('original-vga-ctrl','Cable VGA 5M ',180,'🖥')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/m5fclvcT9mZC9Wwuwd3njL73AFsutY36oT3lKQQ4cYE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFmRU9lLVUwZEwu/anBn"
+                 alt="Cable VGA 3m " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ADMIN</div>
+            <div class="product-name">Cable VGA 3m </div>
+            <div class="product-specs">PC</div>
+            <div class="product-footer">
+              <div><div class="product-price">140 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('original-vga-ctrl','Cable VGA 3m ',140,'🖥')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/BS2gAok690p5YZJplHFghYUowtmamyrdBT8idEQ7jNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8z/LzM3L0R2aS1jYWJs/ZS5qcGc"
+                 alt="Cable DVI Original" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Original</div>
+            <div class="product-name">Cable DVI Original</div>
+            <div class="product-specs">PC</div>
+            <div class="product-footer">
+              <div><div class="product-price">100 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('original-DVI-ctrl','Cable DVI Original',100,'🖥')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
                         <div class="product-card" data-cat="cables">
           <div class="product-thumb">
             <img src="https://down-id.img.susercontent.com/file/id-11134207-81zte-mel9w7vd3jsz4c"
@@ -509,6 +767,38 @@
           </div>
         </div>
 
+ <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/99f96912-dd3b-41a1-83cb-1015b4b10a44.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                 alt="mouse pad MED" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand"></div>
+            <div class="product-name">Mouse Pad MED</div>
+            <div class="product-specs"> PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">90 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('mouse-pad','Mouse Pad MED',90,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+         <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://th.bing.com/th/id/OIP.pwo-3r3kpnbFAVXJIp9UrAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="mouse pad rezer" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">RAZER</div>
+            <div class="product-name">Mouse Pad Razer&Hunter SMALL COPY</div>
+            <div class="product-specs"> PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">50 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('razor-mouse-pad','Mouse Pad Razer&Hunter SMALL COPY',50,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
 
                         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
@@ -529,7 +819,7 @@
         
                         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
-            <img src="https://th.bing.com/th/id/R.864c89e655c46c87eac033105fad1f1f?rik=T1dGx22DXAUOKg&riu=http%3a%2f%2fking-tech-eg.com%2fcdn%2fshop%2ffiles%2felectric-power-hyper-4-port-5m-bag.jpg%3fv%3d1738263075&ehk=rYjAYxZHXKrJsgAqkz7%2bUCBpp0Jfk45n9W31Q4dEVhA%3d&risl=&pid=ImgRaw&r=0"
+            <img src="https://imgs.search.brave.com/8e2roHBe4ikGeJVXjkGZyraqrVvOulhMJ4OBLvcrQF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9raW1v/c3RvcmUubmV0L2Nk/bi9zaG9wL3Byb2R1/Y3RzL3plcm8tenIt/MjAtNHBvcnQtcG93/ZXItc3RyaXAtM20t/a2ltby1zdG9yZS0y/LmpwZz92PTE3MTUw/MzQzMDQmd2lkdGg9/MTAwMA"
                  alt="electric power 4 port zero" loading="lazy" />
           </div>
           <div class="product-body">
@@ -577,6 +867,69 @@
           </div>
         </div>
 
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/B6t74IQHc-d0qI2Nn0rKF2Ww3mtxfH9BZ4_YCiq9b50/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF0NWdpSWJkWEwu/anBn"
+                 alt="Cable Network Cat 6 5m" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Network</div>
+            <div class="product-name">Cable Network Cat 6 5m</div>
+            <div class="product-specs">  PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">75 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('network-cable','Cable Network Cat 6 5m',75,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/2u7huipzqyYk3qcMb85lokB5BClgrWkgSLSYD-RdPlw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF1RkE4cWVvLUwu/anBn"
+                 alt="Cable Network Cat 6 10m" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Network</div>
+            <div class="product-name">Cable Network Cat 6 10m</div>
+            <div class="product-specs">  PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">120 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('network-cable','Cable Network Cat 6 10m',120,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/BfiyEarWKgcINN3_Zu8esRysLN9333PzKjOxdsshOQ8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxcGlMWld3QXRM/LmpwZw"
+                 alt="Cable Network Cat 6 15m" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Network</div>
+            <div class="product-name">Cable Network Cat 6 15m</div>
+            <div class="product-specs">  PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">160 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('network-cable','Cable Network Cat 6 15m',160,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/rJIp7FSUryu4RnPTMVSIp88nQZgato2-wfttFZFnCWo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF4WHh1SG9YUEwu/anBn"
+                 alt="Cable Network Cat 20 20m" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Network</div>
+            <div class="product-name">Cable Network Cat 6 20m</div>
+            <div class="product-specs">  PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">190 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('network-cable','Cable Network Cat 6 20m',190,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
         
           <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
@@ -646,6 +999,22 @@
           </div>
         </div>
 
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/86/3870231/1.jpg?3208"
+                 alt="Wifi Usb 2.4 ghz " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">intena</div>
+            <div class="product-name">Wifi Usb 2.4 ghz</div>
+            <div class="product-specs"> Wifi | PC </div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Wifi bluetooth-ctrl','Wifi Usb 2.4 ghz',200,'🎮')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
         
                         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
@@ -680,7 +1049,86 @@
           </div>
         </div>
 
-        
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/hcDeYEagrxbTdY2Zvzpj4Q3W8g6jEcaZ5OOj5J0aZfM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb21w/YXJ0c2xiLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/MS9WMzEwLTEyLmpw/Zw"
+                 alt="KISONLI-V310 SPEAKER USB " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">KISONLI</div>
+            <div class="product-name">KISONLI-V310 SPEAKER USB </div>
+            <div class="product-specs"> USB| PC | BLUE</div>
+            <div class="product-footer">
+              <div><div class="product-price">160 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('KISONLI-310','KISONLI-V310 SPEAKER USB ',160,'🔊​')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/o7GazGkCn2bGjFZWFML_2wgADQC_b_2b6jvUwtW2LMk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9raW1v/c3RvcmUubmV0L2Nk/bi9zaG9wL2ZpbGVz/L0tpc29ubGlMLTEw/MTBSR0JTcGVha2Vy/Mi4wLUJsYWNrXzEu/anBnP3Y9MTczMjM3/MTg3MCZ3aWR0aD0x/MDAw"
+                 alt="Kisonli L-1010 PC Speakers " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Kisonli</div>
+            <div class="product-name">Kisonli L-1010 PC Speakers </div>
+            <div class="product-specs"> USB| PC | Black</div>
+            <div class="product-footer">
+              <div><div class="product-price">300 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Kisonli','Kisonli L-1010 PC Speakers ',300,'🔊​')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/PhFXTRMtnZTQH5B0qfpw1lYIoBhVK06C8uA_-koDTuw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9raW1v/c3RvcmUubmV0L2Nk/bi9zaG9wL2ZpbGVz/L0tpc29ubGlMLTUw/NTBTcGVha2VyMl8y/LmpwZz92PTE3NTc5/NTcyMDImd2lkdGg9/MTAwMA"
+                 alt="Kisonli L-5050 Speaker 2.0 " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Kisonli</div>
+            <div class="product-name">Kisonli L-5050 Speaker 2.0 </div>
+            <div class="product-specs"> USB| PC | Black</div>
+            <div class="product-footer">
+              <div><div class="product-price">300 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Kisonli L-5050','Kisonli L-5050 Speaker 2.0 ',300,'🔊​')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://imgs.search.brave.com/P1Oxg6mZk6irS4pCQ8irIIiUKY6aJjzjlXkNbTSPZeg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2hvcHJpZ2h0LnBr/L2ltYWdlcy9wcm9k/dWN0X2dhbGxlcnkv/MTY3NjczMTM2MV8w/MS5qcGc"
+                 alt="Kisonli A-101s Multimedia USB " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Kisonli</div>
+            <div class="product-name">Kisonli A-101s Multimedia USB </div>
+            <div class="product-specs"> USB| PC | Black</div>
+            <div class="product-footer">
+              <div><div class="product-price"> 260 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Kisonli a101s','Kisonli A-101s Multimedia USB ',300,'🔊​')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="extensions">
+          <div class="product-thumb">
+            <img src="https://kkomputer.com/18443-home_default/speaker-usb-k2066-usb35mm-5v-20-led-lightning.jpg"
+                 alt="GreatWall G11 USB Speaker " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">GreatWall</div>
+            <div class="product-name">GreatWall G11 USB Speaker </div>
+            <div class="product-specs"> USB| PC | RGB </div>
+            <div class="product-footer">
+              <div><div class="product-price"> 350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('GreatWall','GreatWall G11 USB Speaker ',350,'🔊​')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
                         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
             <img src="https://th.bing.com/th/id/OIP.7h3lcjRoDjQMPQcodr5Q4gHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
@@ -717,7 +1165,7 @@
         
                         <div class="product-card" data-cat="extensions">
           <div class="product-thumb">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.KeBHx4EXWNnZp-oRRpShoAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
+            <img src="https://www.unitek-products.com/cdn/shop/products/USB3.0_4-Port_Hub_2.jpg?v=1599118958&width=1000"
                  alt="hub usb 4 port usb3" loading="lazy" />
           </div>
           <div class="product-body">
@@ -732,21 +1180,7 @@
         </div>
 
         
-                        <div class="product-card" data-cat="extensions">
-          <div class="product-thumb">
-            <img src="https://th.bing.com/th/id/OIP.pwo-3r3kpnbFAVXJIp9UrAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
-                 alt="mouse pad rezer" loading="lazy" />
-          </div>
-          <div class="product-body">
-            <div class="product-brand">RAZER</div>
-            <div class="product-name">Mouse Pad Razer&Hunter SMALL COPY</div>
-            <div class="product-specs"> PC </div>
-            <div class="product-footer">
-              <div><div class="product-price">50 ج</div><span class="badge badge-in">متوفر</span></div>
-              <button class="btn-add" onclick="addToCart('razor-mouse-pad','Mouse Pad Razer&Hunter SMALL COPY',50,'🎮')">+ أضف</button>
-            </div>
-          </div>
-        </div>
+                       
 
 
 
@@ -758,12 +1192,12 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-logo">4<span class="x">R</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
       <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
       <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
       <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 4<span class="x">R</span></span><span>متجر الكمبيوتر والألعاب</span></div>
   </div>
 </footer>
 

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4R | إكسسوارات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">4<span class="x">R</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="games.html">الألعاب</a></li>
+      <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+      <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" class="active">إكسسوارات موبيل</a></li>
+      <li><a href="game-topup.html">شحن الألعاب</a></li>
+      <li><a href="services.html">الصيانة</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="nav-cart">🛒 السلة<span class="cart-badge">0</span></a>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="games.html">الألعاب</a></li>
+    <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
+    <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" class="active" >إكسسوارات موبيل</a></li>>
+    <li><a href="game-topup.html">شحن الألعاب</a></li>
+    <li><a href="services.html">الصيانة</a></li>
+    <li><a href="reviews.html">التقييمات</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="cart.html">🛒 السلة</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/201060842931" target="_blank" rel="noreferrer">💬 واتساب: 01060842931</a>
+  </div>
+</div>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>إكسسوارات</span></div>
+      <h1 class="page-title">🎧 إكسسوارات</h1>
+    </div>
+  </div>
+
+  <div style="background:var(--dark);border-bottom:1px solid var(--border);padding:16px 0">
+    <div class="container" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-sm filter-btn" onclick="filterAcc('all',this)">الكل</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('headset',this)">هيدفون</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('head',this)">سماعات</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('airpods',this)">ايربودز</button>
+            <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('cables',this)">كبلات</button>
+                  <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('plug',this)">راس شاحن</button>
+      <button class="btn btn-outline btn-sm filter-btn" onclick="filterAcc('smartwatch',this)">ساعات ذكيه</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid" id="accGrid">
+
+
+<div class="product-card" data-cat="smartwatch">
+          <div class="product-thumb">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxqvSqj-gN9pmUg8g5dSgRHELvCGP02WNBu_L_NM8i8of_ecGIQm0Z0kg&s=10"
+                 alt="Smart Watch X9+ MAX " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Connectme</div>
+            <div class="product-name">Smart Watch X9+ MAX</div>
+            <div class="product-specs">  Straps 6 | Connectme</div>
+            <div class="product-footer">
+              <div><div class="product-price">900 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Connectme','Smart Watch X9+ MAX',900,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="smartwatch">
+          <div class="product-thumb">
+            <img src="https://2b.com.eg/media/catalog/product/1/_/1_238.jpg"
+                 alt="Smart Watch SP8 " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Connectme</div>
+            <div class="product-name">Smart Watch SP8</div>
+            <div class="product-specs">  2.1 | Connectme</div>
+            <div class="product-footer">
+              <div><div class="product-price">750 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Connectme','Smart Watch SP8',750,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="smartwatch">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/5588211/1.jpg?5430"
+                 alt="Smart Watch W&O X10 ULTRA3 " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">W&O</div>
+            <div class="product-name">Smart Watch W&O X10 ULTRA3</div>
+            <div class="product-specs">  Curved | W&O</div>
+            <div class="product-footer">
+              <div><div class="product-price">1000 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('W&O','Smart Watch W&O X10 ULTRA3',1000,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="smartwatch">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/62/6415431/1.jpg?3060"
+                 alt="Smart Watch MK85" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">MK85</div>
+            <div class="product-name">Smart Watch MK85</div>
+            <div class="product-specs">  Fitness Tracker | MK85 </div>
+            <div class="product-footer">
+              <div><div class="product-price">700 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('W&O','Smart Watch MK85',700,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+ <div class="product-card" data-cat="headset">
+          <div class="product-thumb">
+            <img src="https://majentik.com/cdn/shop/files/002-1.png?v=1769498665&width=701"
+                 alt="MAJENTIK HEADPHONE MH002" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">MAJENTIK</div>
+            <div class="product-name">MAJENTIK HEADPHONE MH002</div>
+            <div class="product-specs"> Noise Cancelation | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">900 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('MAJENTIK','MAJENTIK HEADPHONE MH002',900,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+ <div class="product-card" data-cat="headset">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/11/9279431/1.jpg?3806"
+                 alt="X-SCOOT HEADPHONE XS-659" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">X-SCOOT</div>
+            <div class="product-name">X-SCOOT HEADPHONE XS-659</div>
+            <div class="product-specs"> Foldable | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">700 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('X-SCOOT','X-SCOOT HEADPHONE XS-659',700,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+         <div class="product-card" data-cat="headset">
+          <div class="product-thumb">
+            <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/68/5294431/1.jpg?6930"
+                 alt="X-SCOOT HEADPHONE XS-654" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">X-SCOOT</div>
+            <div class="product-name">X-SCOOT HEADPHONE XS-654</div>
+            <div class="product-specs"> X-SCOOT | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">750 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('X-SCOOT','X-SCOOT HEADPHONE XS-654',750,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="headset">
+          <div class="product-thumb">
+            <img src="https://f.nooncdn.com/p/pzsku/ZF49EA0126AF0A42D01DAZ/45/1765797558/a938758b-f301-4ff8-bb86-3c881f75450d.jpg?width=800"
+                 alt="I-CONX i5001 Wireless Over-Ear Headphone" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">I-CONX</div>
+            <div class="product-name">I-CONX i5001 Wireless Over-Ear Headphone</div>
+            <div class="product-specs">  High-Fidelity Audio | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">850 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('I-CONX','I-CONX i5001 Wireless Over-Ear Headphone',850,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="airpods">
+          <div class="product-thumb">
+            <img src="https://technoshop.pk/wp-content/uploads/2024/02/Apple-AirPods-Pro-2-Master-Copy.jpg"
+                 alt="Apple Airpods Pro Copy" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Airpods</div>
+            <div class="product-name">Apple Airpods Pro Copy</div>
+            <div class="product-specs"> Stereo | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Apple','Apple Airpods Pro Copy',350,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="airpods">
+          <div class="product-thumb">
+            <img src="https://kaspardsolutions.com/cdn/shop/files/ER09-03.png?v=1769804554&width=3840"
+                 alt="Apple Airpods Pro 2 Copy" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Airpods</div>
+            <div class="product-name">Apple Airpods 2 Pro Copy</div>
+            <div class="product-specs"> Stereo | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">400 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Apple','Apple Airpods Pro 2 Copy',400,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="airpods">
+          <div class="product-thumb">
+            <img src="https://kaspardsolutions.com/cdn/shop/files/ER09-03.png?v=1769804554&width=3840"
+                 alt="Apple Airpods Pro 2 PRO QUALITY" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Airpods</div>
+            <div class="product-name">Apple Airpods 2 PRO QUALITY</div>
+            <div class="product-specs"> Stereo | ANC</div>
+            <div class="product-footer">
+              <div><div class="product-price">650 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Apple','Apple Airpods pro 2 PRO QUALITY',650,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="airpods">
+          <div class="product-thumb">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxUp8DTAz507GTbT15dgymmFZxkoiWMoai3OaE5Fm8pA&s=10"
+                 alt="Apple Airpods Pro 3 Copy" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">Airpods</div>
+            <div class="product-name">Apple Airpods 3 Pro Copy</div>
+            <div class="product-specs"> Stereo | Bluetooth</div>
+            <div class="product-footer">
+              <div><div class="product-price">450 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Apple','Apple Airpods Pro 3 Copy',450,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="airpods">
+          <div class="product-thumb">
+            <img src="https://majentik.com/cdn/shop/files/Buds_Pro_2.jpg?v=1778002023&width=1080"
+                 alt="MAJENTIK BUDS PRO2" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">MAJENTIK</div>
+            <div class="product-name">MAJENTIK BUDS PRO2</div>
+            <div class="product-specs"> Stereo | ANC</div>
+            <div class="product-footer">
+              <div><div class="product-price">1200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('MAJENTIK','MAJENTIK BUDS PRO2',1200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+      
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/sdfL7143/IMG-1058.jpg"
+                 alt="Cable COUGAR Type-C 2.4 A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C 2.4 A</div>
+            <div class="product-specs">Warranty| Type-C | USB</div>
+            <div class="product-footer">
+              <div><div class="product-price">170 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C 2.4 A',170,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/Hf11RqpX/IMG-1059.jpg"
+                 alt="Cable COUGAR Type-C 3.1 A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C 3.1 A</div>
+            <div class="product-specs">Warranty| Type-C | rubber</div>
+            <div class="product-footer">
+              <div><div class="product-price">190 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C 3.1 A',190,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/jvztxtLz/IMG-1064.jpg"
+                 alt="Cable COUGAR Type-C to IPH 30W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C to IPH 30W</div>
+            <div class="product-specs">Warranty| IPH | Strong</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C to IPH 30W',350,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/C3HxQD8L/IMG-1061.jpg"
+                 alt="Cable ALPHA USB to IPH 3A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">Cable ALPHA USB TO IPH 3A</div>
+            <div class="product-specs">Warranty| IPH | ULTRA FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','Cable ALPHA USB TO IPH 3A',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/93VMQ3wG/IMG-1062.jpg"
+                 alt="Cable COUGAR Type-C to IPH 30W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C to IPH 30W</div>
+            <div class="product-specs">Warranty| IPH | LED LIGHT</div>
+            <div class="product-footer">
+              <div><div class="product-price">250 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C to IPH 30W',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/rGR0R24g/IMG-1060.jpg"
+                 alt="Cable COUGAR Type-C 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C 3.1A</div>
+            <div class="product-specs">Warranty| Type-C | FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C 3.1A',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/FqCbY7py/IMG-1057.jpg"
+                 alt="Cable COUGAR Type-C TO Type-C 60W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C TO Type-C 60W</div>
+            <div class="product-specs">Warranty| Type-C | FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">250 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C TO Type-C 60W',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/qYGm3B0t/IMG-1055.jpg"
+                 alt="Cable COUGAR Type-C TO Type-C 60W L10" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C TO Type-C 60W L10</div>
+            <div class="product-specs">Warranty| Type-C | ULTRA FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">400 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C TO Type-C 60W L10',400,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/2YH6LT6B/IMG-1069.jpg"
+                 alt="Cable COUGAR Micro 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Micro 3.1A</div>
+            <div class="product-specs">Warranty| MICRO |  FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">180 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Micro 3.1A',180,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/wNtnP9Bx/IMG-1068.jpg"
+                 alt="Cable COUGAR Lightning 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Lightning 3.1A</div>
+            <div class="product-specs">Warranty| Lightning |  FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Lightning 3.1A',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/qLhbTkcM/IMG-1070.jpg"
+                 alt="Cable COUGAR Micro 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Micro 3.1A</div>
+            <div class="product-specs">Warranty| Micro |  FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">180 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Micro 3.1A',180,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/cSHv7cnP/IMG-1067.jpg"
+                 alt="Cable JELLICO Lightning 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">Cable JELLICO Lightning 3.1A</div>
+            <div class="product-specs">Warranty| Lightning |  FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable JELLICO Lightning 3.1A',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/dJ7m4SqL/IMG-1065.jpg"
+                 alt="Cable COUGAR Lightning 2.4A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Lightning 2.4A</div>
+            <div class="product-specs">Warranty| Lightning |  FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">170 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Lightning 3.1A',170,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/ymX69PyZ/IMG-1056.jpg"
+                 alt="Cable ALPHA Type-C TO Type-C 100W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">Cable ALPHA Type-C TO Type-C 100W</div>
+            <div class="product-specs">Warranty| Type-C | Super FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">425 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','Cable ALPHA Type-C TO Type-C 100W',425,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/qY3Jx7ms/IMG-1054.jpg"
+                 alt="Cable COUGAR Type-C 5A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR Type-C 5A</div>
+            <div class="product-specs">Warranty| Type-C | Super FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR Type-C 5A',350,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/4RXD5Mkc/IMG-1052.jpg"
+                 alt="Cable ALPHA Type-C 3A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">Cable ALPHA Type-C 3A</div>
+            <div class="product-specs">Warranty| Type-C | FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','Cable ALPHA Type-C 3A',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/1tq0GCq9/IMG-1053.jpg"
+                 alt="Cable JELLICO Lightning 3.1A" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">Cable JELLICO Lightning 3.1A</div>
+            <div class="product-specs">Warranty| Lightning | Super FAST</div>
+            <div class="product-footer">
+              <div><div class="product-price">220 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('Lightning','Cable JELLICO Lightning 3.1A',220,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/CKbdJQKg/IMG-1072.jpg"
+                 alt="Cable COUGAR AUX To Type-C" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Cable COUGAR AUX To Type-C</div>
+            <div class="product-specs">Warranty| Type-C | 3.5</div>
+            <div class="product-footer">
+              <div><div class="product-price">200 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Cable COUGAR AUX To Type-C',200,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="cables">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/yb46SsM/IMG-1071.jpg"
+                 alt="Cable ALPHA AUX " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">Cable ALPHA AUX</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">120 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','Cable ALPHA AUX',120,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="head">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/B2vs5pxT/IMG-1047.jpg"
+                 alt="Earphone Stereo COUGAR AUX " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Earphone Stereo COUGAR AUX</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">220 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Earphone Stereo COUGAR AUX',220,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="head">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/k24XBGpy/IMG-1051.jpg"
+                 alt="Earphone RICH DEEP BASS COUGAR AUX " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Earphone RICH DEEP BASS COUGAR AUX</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">250 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Earphone RICH DEEP BASS COUGAR AUX',250,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="head">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/HpbqPwdR/IMG-1043.jpg"
+                 alt="Earphone Stereo COUGAR Lightning " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Earphone Stereo COUGAR Lightning</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Earphone Stereo COUGAR Lightning',350,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="head">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/36yN27r/IMG-1040.jpg"
+                 alt="Earphone Stereo COUGAR Type-C " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Earphone Stereo COUGAR Type-C</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">250 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Earphone Stereo COUGAR Type-C',250,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="head">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/21VdS5Td/IMG-1039.jpg"
+                 alt="Earphone Stereo Bass COUGAR Type-C " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">Earphone Stereo Bass COUGAR Type-C</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">350 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','Earphone Stereo Bass COUGAR Type-C',350,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/DgGT2nqz/IMG-1078.jpg"
+                 alt="JELLICO CHARGER 20W Type-C " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">JELLICO CHARGER  Type-C 20W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">600 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('JELLICO','JELLICO CHARGER 20W Type-C',600,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/j9tGZVpN/IMG-1079.jpg"
+                 alt="JELLICO CHARGER Smart Chip Type-C 40W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">JELLICO CHARGER Smart Chip Type-C 40W</div>
+            <div class="product-specs">Warranty | PORT 20W </div>
+            <div class="product-footer">
+              <div><div class="product-price">650 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('JELLICO','JELLICO CHARGER Smart Chip Type-C 40W',650,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/QjkFp7y7/IMG-1080.jpg"
+                 alt="JELLICO CHARGER Smart Chip Type-C 30W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">JELLICO CHARGER Smart Chip Type-C 30W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">750 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('JELLICO','JELLICO CHARGER Smart Chip Type-C 30W',750,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/trZQ2P9/IMG-1081.jpg"
+                 alt="COUGAR USB-C PLUG Type-C 20W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">COUGAR USB-C PLUG Type-C 20W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">500 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','COUGAR USB-C PLUG Type-C 20W',500,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/Q3Vx2xvt/IMG-1082.jpg"
+                 alt="COUGAR USB-C PLUG Micro 12W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">COUGAR USB-C PLUG Micro 12W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">250 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','COUGAR USB-C PLUG Micro 12W',250,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/zhN6P6H7/IMG-1073.jpg"
+                 alt="ALPHA USB-C PLUG Type-C 22.5W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">ALPHA USB-C PLUG Type-C 22.5W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">450 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','ALPHA USB-C PLUG Type-C 22.5W',450,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/q3cg7Mnj/IMG-1074.jpg"
+                 alt="ALPHA USB-C PLUG Lightning 22.5W " loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">ALPHA</div>
+            <div class="product-name">ALPHA USB-C PLUG Lightning 22.5W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">450 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('ALPHA','ALPHA USB-C PLUG Lightning 22.5W',450,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/HLcGYrKJ/IMG-1075.jpg"
+                 alt="COUGAR Car Charger 2 port USB-C Type-C 38W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">COUGAR Car Charger 2 port USB-C Type-C 38W </div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">700 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','COUGAR Car Charger 2 port USB-C Type-C 38W',700,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/gLy5D28P/IMG-1076.jpg"
+                 alt="COUGAR Super Fast Charger Type-C 45W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">COUGAR</div>
+            <div class="product-name">COUGAR Super Fast Charger Type-C 45W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">850 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('COUGAR','COUGAR Super Fast Charger Type-C 45W',850,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="product-card" data-cat="plug">
+          <div class="product-thumb">
+            <img src="https://i.ibb.co/V0XJ6SvP/IMG-1077.jpg"
+                 alt="JELLICO Super Fast Charger Type-C 25W" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-brand">JELLICO</div>
+            <div class="product-name">JELLICO Super Fast Charger Type-C 25W</div>
+            <div class="product-specs">Warranty</div>
+            <div class="product-footer">
+              <div><div class="product-price">500 ج</div><span class="badge badge-in">متوفر</span></div>
+              <button class="btn-add" onclick="addToCart('JELLICO','JELLICO Super Fast Charger Type-C 25W',500,'📱')">+ أضف</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">4<span class="x">R</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
+      <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
+      <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 4<span class="x">R</span></span><span>متجر الكمبيوتر والألعاب</span></div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+function filterAcc(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('btn-red'); b.classList.add('btn-outline'); });
+  btn.classList.remove('btn-outline'); btn.classList.add('btn-red');
+  document.querySelectorAll('#accGrid .product-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+<script src="js/ratings.js"></script>
+</body>
+</html>

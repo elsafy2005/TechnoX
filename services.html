@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechnoX | الصيانة</title>
+  <title>4R | الصيانة</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -11,12 +11,13 @@
 
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="logo">TECHNO<span class="x">X</span></a>
+    <a href="index.html" class="logo">4<span class="x">R</span></a>
     <ul class="nav-links">
       <li><a href="index.html">الرئيسية</a></li>
       <li><a href="games.html">الألعاب</a></li>
       <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
-      <li><a href="accessories.html">إكسسوارات</a></li>
+      <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
       <li><a href="game-topup.html">شحن الألعاب</a></li>
       <li><a href="services.html" class="active">الصيانة</a></li>
       <li><a href="reviews.html">التقييمات</a></li>
@@ -36,7 +37,8 @@
     <li><a href="index.html">الرئيسية</a></li>
     <li><a href="games.html">الألعاب</a></li>
     <li><a href="desktops.html">كمبيوتر مكتبي</a></li>
-    <li><a href="accessories.html">إكسسوارات</a></li>
+    <li><a href="accessories.html" >إكسسوارات كمبيوتر</a></li>
+      <li><a href="mobile.html" >إكسسوارات موبيل</a></li>
     <li><a href="game-topup.html">شحن الألعاب</a></li>
     <li><a href="services.html" class="active">الصيانة</a></li>
     <li><a href="reviews.html">التقييمات</a></li>
@@ -148,12 +150,12 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div><div class="footer-logo">TECHNO<span class="x">X</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
+      <div><div class="footer-logo">4<span class="x">R</span></div><p class="footer-desc">وجهتك الأولى لكل حاجة تتعلق بالتقنية والجيمينج.</p></div>
       <div><div class="footer-heading">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="games.html">الألعاب</a></li><li><a href="desktops.html">كمبيوتر مكتبي</a></li></ul></div>
       <div><div class="footer-heading">خدمات</div><ul class="footer-links"><li><a href="game-topup.html">شحن الألعاب</a></li><li><a href="services.html">الصيانة</a></li><li><a href="cart.html">عربة التسوق</a></li></ul></div>
       <div><div class="footer-heading">تواصل</div><ul class="footer-links"><li><a href="contact.html">تواصل معنا</a></li><li><a href="tel:01060842931">01060842931</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 TECHNO<span class="x">X</span></span></div>
+    <div class="footer-bottom"><span>جميع الحقوق محفوظة &copy; 2025 4<span class="x">R</span></span></div>
   </div>
 </footer>
 
@@ -183,7 +185,7 @@ function submitBooking(e) {
 
   /* ── WhatsApp ── */
   const waMsg =
-    `🔧 *حجز صيانة — TechnoX*\n━━━━━━━━━━━━\n` +
+    `🔧 *حجز صيانة — 4R*\n━━━━━━━━━━━━\n` +
     `👤 ${name}\n📞 ${phone}\n🛠️ ${service}\n📅 ${formattedDate}\n` +
     `${device ? '💻 ' + device + '\n' : ''}${notes ? '📝 ' + notes : ''}`;
   window.open('https://wa.me/201060842931?text=' + encodeURIComponent(waMsg), '_blank');

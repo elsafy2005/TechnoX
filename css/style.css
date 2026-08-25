@@ -13,9 +13,9 @@
   --white:     #ffffff;
   --gray:      #999999;
   --light:     #cccccc;
-  --red:       #e00000;
-  --red-dark:  #3a0000;
-  --red-hover: #ff1a1a;
+  --red:       #0059ff;
+  --red-dark:  #0e0f0f;
+  --red-hover: #1a98ff;
 }
 
 html { scroll-behavior: smooth; }
@@ -74,7 +74,7 @@ main { flex: 1; }
   justify-content: space-between; height: 64px;
 }
 .logo { font-size: 1.6rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; }
-.logo .x { color: var(--red); }
+.logo .x { color:rgb(0, 110, 255) }
 
 .nav-links { display: flex; gap: 2px; }
 .nav-links a {
